@@ -744,15 +744,16 @@ button.shelter-toggle {
     display: table-cell;
     vertical-align: middle;
     text-align: right; }
-
-.more-info {
-  display: none;
-  background-color: #ececec;
-  color: #3b3b49;
-  margin-top: 30px;
-  clear: both; }
-  .more-info address {
-    margin: 0px auto; }
-    .more-info address a {
-      color: #46bfff;
-      text-decoration: none; }
+  .shelter-list-component .more-info {
+    display: none; }
+  .shelter-list-component.open .more-info {
+    display: block;
+    background-color: #ececec;
+    color: #3b3b49;
+    margin-top: 30px;
+    clear: both; }
+    .shelter-list-component.open .more-info address {
+      margin: 0px auto; }
+      .shelter-list-component.open .more-info address a {
+        color: #46bfff;
+        text-decoration: none; }

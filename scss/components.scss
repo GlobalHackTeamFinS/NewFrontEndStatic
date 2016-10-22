@@ -74,18 +74,23 @@
 		vertical-align: middle;
 		text-align: right;
 	}
-}
-.more-info {
-	display: none;
-	background-color: $neutral-2;
-	color: $neutral-1;
-	margin-top: 30px;
-	clear: both;
-	address {
-		margin: 0px auto;
-		a {
-			color: $action-color;
-			text-decoration: none;
+	.more-info{
+		display: none;
+	}
+	&.open {
+		.more-info {
+			display: block;
+			background-color: $neutral-2;
+			color: $neutral-1;
+			margin-top: 30px;
+			clear: both;
+			address {
+				margin: 0px auto;
+				a {
+					color: $action-color;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
