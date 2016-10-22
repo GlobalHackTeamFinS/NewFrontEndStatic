@@ -1,14 +1,7 @@
-$notbrightblue: #6C029F;
-$brightblue: #46bfff;
-$lightgrey: #ececec;
-$textblack: #3b3b49;
-$darkblue: #385573;
-$pink: #ff4db6;
-$green: #0dff8e;
-$white: #fff;
-
-
-$font-stack:   'Lato', sans-serif;
+@import 'variables';
+@import 'layout';
+@import 'buttons';
+@import 'components';
 
 
 body {
