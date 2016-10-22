@@ -571,46 +571,58 @@ textarea {
     page-break-after: avoid; } }
 h1, h2, h3 {
   font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  margin: 0px; }
+  font-weight: 600;
+  margin: 0; }
+
+h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
 
 p {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  margin: 0px; }
+  margin: 0; }
 
 body {
   margin: 0px; }
 
 header {
-  height: 114px;
+  height: 120px;
   width: 100%;
   background-color: #6C029F; }
   header h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    padding-top: 10px; }
     @media (min-width: 600px) {
       header h1 {
-        text-align: left; } }
+        text-align: left;
+        float: left;
+        width: 50%;
+        padding-top: 30px;
+        padding-left: 30px; } }
   header p {
     text-align: center;
+    color: #fff;
+    font-size: 14px;
     color: #fff; }
     @media (min-width: 600px) {
       header p {
         text-align: right; } }
-  @media (min-width: 600px) {
-    header .title {
-      float: left;
-      width: 50%;
-      padding-left: 30px;
-      padding-top: 30px; } }
+  header a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #46bfff;
+    font-size: 12px; }
   @media (min-width: 600px) {
     header .your-location {
       float: right;
-      padding-right: 30px;
-      padding-top: 20px; }
+      padding-top: 20px;
+      padding-right: 30px; }
       header .your-location p.change {
         margin-top: 12px;
         font-weight: 600; }
@@ -639,11 +651,25 @@ footer {
   background-color: #ececec;
   text-align: center; }
 
+button.show-more {
+  width: 80px;
+  background-color: #46bfff;
+  text-align: center;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 14px;
+  display: block;
+  margin: 0px auto;
+  border: none; }
+
+button:hover {
+  background-color: #6C029F; }
+
 .shelter-list-component {
   margin: 0px auto; }
   .shelter-list-component .title {
-    margin: 20px auto;
-    font-size: 1.5em;
+    margin: 30px auto;
+    font-size: 24px;
     text-align: center;
     color: #3b3b49;
     font-weight: 600; }
@@ -655,11 +681,7 @@ footer {
       width: 33.3%;
       text-align: center; }
       .shelter-list-component .stats-container .stats p {
-        font-size: 28px; }
-      .shelter-list-component .stats-container .stats h3 {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 1px; }
+        font-size: 24px; }
   .shelter-list-component .person-icons {
     width: 100%;
     margin: 30px auto;
@@ -672,6 +694,3 @@ footer {
         height: 48px;
         display: block;
         margin: 0px auto; }
-  .shelter-list-component .show-more {
-    width: 100%;
-    text-align: center; }
