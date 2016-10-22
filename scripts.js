@@ -1,9 +1,10 @@
 $(document).ready(function () {
   $(".shelter-toggle" ).click(function() {
-	  $( ".more-info" ).slideToggle( "slow");
-	  var button = $(this);
-	  button.text(button.text() === "SHOW LESS" ? "SHOW MORE" : "SHOW LESS");
+  	var parentComponent = $(this).parents('.shelter-list-component');
+  	if (parentComponent.hasClass('open')){
+  		parentComponent.removeClass('open');
+  	} else {
+  		parentComponent.addClass('open');
+  	}
   });
 });
-
-
