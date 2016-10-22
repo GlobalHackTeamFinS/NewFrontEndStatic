@@ -46,7 +46,7 @@
     <section class="main-container">
       <!-- PARSE JSON -->
       <?php
-        $string = file_get_contents("shelters.json");
+        $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
       ?>
 
@@ -55,10 +55,10 @@
         <div class="container">
           <div class="row">
             <div class="shelter-list-component">
-              <h1 class="title"><?php echo $user['provider'] ?></h1>
-              <section class="stats-container">
+              <h1 class="title"><?php echo $user['name'] ?></h1>
+              <section>
                 <div class="stats open-beds">
-                  <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
+                  <p></p>
                   <h3>Beds Open</h3>
                 </div>
                 <div class="stats doors-close">
@@ -106,7 +106,7 @@
                 </div>
               </section>
               <section>
-              <div class="person-icons">
+              <div class="person-icon-container">
                 <div class="icon">
                   <img src="/images/male_icon.svg">
                 </div>
@@ -120,7 +120,9 @@
                   <img src="/images/male_icon.svg">
                 </div>
               </div>
-              <button class="shelter-toggle">SHOW MORE</button>
+              <div class="button-container">
+                <button class="shelter-toggle">SHOW MORE</button>
+              </div>
               </section>
             </div>
         </div>
@@ -129,11 +131,15 @@
           <div class="container">
             <div class="row">
               <address>
-              <a href="tel:+13145658100" class="phone">1-314.565.8100</a>
-              <p class="address">20 West Pine Street<br/>
-                St. Louis, MO<br/>
-                63136
-              </p>
+              <p class="phone"><?php echo $user['phone'] ?></p>
+              <ul class="address">
+                <li><?php echo $user['address']['line1'] ?></li>
+                <?php
+                  $line2 = $user['address']['line2'] ? '<li>' . $user['address']['line2'] . '</li>' : null;
+                  echo $line2;
+                ?>
+                <li><?php echo $user['address']['city'] . ', ' . $user['address']['state'] . ' ' .  $user['address']['zip'] ?></li>
+              </ul>
               <a href="directions">Get Directions</a>
               <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
             </address>
@@ -146,7 +152,7 @@
     </section>
 
     <footer>
-
+      <h2 
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>

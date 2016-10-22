@@ -61,6 +61,17 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/sampleProviders.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sampleProviders.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/sampleProviders-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/scripts.js": {
 		"fileType": 64,
 		"ignore": 0,

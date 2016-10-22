@@ -1,0 +1,436 @@
+[
+  {
+    "id": "f9b51f5d-1fd8-46d7-9e79-d92661ded081",
+    "name": "TERSANKI",
+    "email": "lucyrasmussen@tersanki.com",
+    "phone": "+1 (966) 522-2183",
+    "address": {
+      "line1": "285 Vista Place",
+      "line2": null,
+      "city": "Ferney",
+      "state": "Maine",
+      "zip": 31979
+    },
+    "registered": "2015-01-20T06:27:28 +06:00",
+    "gpsLocation": {
+      "latitude": 71.688591,
+      "longitude": 35.517902
+    },
+    "milesAway": 0.4805,
+    "acceptedClients": {
+      "men": false,
+      "women": true,
+      "children": true,
+      "veteran": false,
+      "handicap": false
+    },
+    "totalBeds": 38,
+    "occupiedBeds": 12,
+    "intakeStart": 1209,
+    "intakeEnd": 1329,
+    "description": "Amet deserunt eu velit aute Lorem. Cillum in duis ea sint eiusmod do sint ea non eu laboris amet eu. Nostrud dolore mollit incididunt eu.\r\n"
+  },
+  {
+    "id": "e8d1ecc6-0584-4fa6-9e3b-afc12064b7aa",
+    "name": "ZILLACON",
+    "email": "lucyrasmussen@zillacon.com",
+    "phone": "+1 (821) 538-2253",
+    "address": {
+      "line1": "561 Forbell Street",
+      "line2": null,
+      "city": "Marysville",
+      "state": "Indiana",
+      "zip": 44734
+    },
+    "registered": "2014-11-21T08:14:00 +06:00",
+    "gpsLocation": {
+      "latitude": -64.162235,
+      "longitude": -157.022494
+    },
+    "milesAway": 5.2195,
+    "acceptedClients": {
+      "men": true,
+      "women": true,
+      "children": false,
+      "veteran": true,
+      "handicap": false
+    },
+    "totalBeds": 73,
+    "occupiedBeds": 55,
+    "intakeStart": 1090,
+    "intakeEnd": 1210,
+    "description": "Labore eu labore voluptate excepteur labore esse. Anim sit sint deserunt ut ex id dolore sint excepteur id cillum in sit. Aliquip enim laborum eu ut cupidatat ut ut culpa deserunt sit incididunt officia. Consectetur aute consectetur excepteur cupidatat. Pariatur dolor ad dolor velit est anim cupidatat minim aliqua aute ipsum mollit. Mollit sunt mollit incididunt dolor mollit ut duis ad consequat cillum aliquip id laboris.\r\n"
+  },
+  {
+    "id": "1a0b338d-0a0c-4e04-8e7c-d38e1e9bb98f",
+    "name": "ZIGGLES",
+    "email": "lucyrasmussen@ziggles.com",
+    "phone": "+1 (931) 482-2322",
+    "address": {
+      "line1": "175 Hanson Place",
+      "line2": null,
+      "city": "Caledonia",
+      "state": "Oklahoma",
+      "zip": 19617
+    },
+    "registered": "2015-09-10T04:18:26 +05:00",
+    "gpsLocation": {
+      "latitude": -23.524661,
+      "longitude": -164.988967
+    },
+    "milesAway": 1.169,
+    "acceptedClients": {
+      "men": true,
+      "women": false,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 56,
+    "occupiedBeds": 54,
+    "intakeStart": 1308,
+    "intakeEnd": 1428,
+    "description": "Reprehenderit deserunt commodo exercitation fugiat proident irure proident. Dolor aliqua aliquip id est officia fugiat aute non et culpa ex deserunt. Deserunt proident cillum ullamco esse velit minim quis veniam do cillum tempor ipsum in. Aute ea dolore culpa adipisicing ea et incididunt aute ut sint. Ullamco aute minim sit dolor Lorem sint sint cupidatat fugiat eu exercitation. Dolore id laboris Lorem sint consequat excepteur laborum eu amet in est. Excepteur magna occaecat veniam ad aliquip cillum eu tempor est.\r\n"
+  },
+  {
+    "id": "acd6c78f-cf32-4f1d-a669-08aa316a8746",
+    "name": "GEEKY",
+    "email": "lucyrasmussen@geeky.com",
+    "phone": "+1 (966) 558-2813",
+    "address": {
+      "line1": "681 Forrest Street",
+      "line2": null,
+      "city": "Blende",
+      "state": "Guam",
+      "zip": 48114
+    },
+    "registered": "2014-10-06T11:13:51 +05:00",
+    "gpsLocation": {
+      "latitude": 58.087098,
+      "longitude": 172.979241
+    },
+    "milesAway": 2.7414,
+    "acceptedClients": {
+      "men": false,
+      "women": false,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 81,
+    "occupiedBeds": 78,
+    "intakeStart": 1312,
+    "intakeEnd": 1432,
+    "description": "Est tempor in fugiat tempor incididunt reprehenderit minim ea nulla deserunt magna. Esse mollit ad labore sint labore et fugiat irure sit reprehenderit tempor. Sit cillum in amet aliquip aute commodo aute nulla ullamco qui excepteur aliquip. Aute pariatur proident id cillum voluptate nulla. Enim aliqua et ex occaecat ipsum eiusmod adipisicing. Dolor irure occaecat proident labore magna.\r\n"
+  },
+  {
+    "id": "301642a4-d4f5-4e7d-b954-1cb26a5886e3",
+    "name": "MALATHION",
+    "email": "lucyrasmussen@malathion.com",
+    "phone": "+1 (921) 431-3267",
+    "address": {
+      "line1": "593 Bleecker Street",
+      "line2": null,
+      "city": "Brownsville",
+      "state": "Washington",
+      "zip": 20633
+    },
+    "registered": "2015-04-09T09:41:18 +05:00",
+    "gpsLocation": {
+      "latitude": -41.252586,
+      "longitude": 108.321163
+    },
+    "milesAway": 4.3811,
+    "acceptedClients": {
+      "men": false,
+      "women": true,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 79,
+    "occupiedBeds": 66,
+    "intakeStart": 1310,
+    "intakeEnd": 1430,
+    "description": "Sit id voluptate adipisicing minim ex officia cupidatat occaecat. Velit laboris deserunt anim ea eiusmod dolor labore. Nulla et aliquip cillum dolore et fugiat laborum mollit mollit aute cupidatat. Sunt do nostrud ad qui eiusmod aute consectetur mollit irure minim do fugiat incididunt velit. Occaecat commodo dolore in aliquip cupidatat dolore nulla elit magna magna minim veniam pariatur minim.\r\n"
+  },
+  {
+    "id": "8b62da62-aca8-4670-ad2e-034715e55a5b",
+    "name": "SENMEI",
+    "email": "lucyrasmussen@senmei.com",
+    "phone": "+1 (989) 425-3493",
+    "address": {
+      "line1": "289 Arlington Place",
+      "line2": null,
+      "city": "Kieler",
+      "state": "Georgia",
+      "zip": 36578
+    },
+    "registered": "2014-09-11T04:36:38 +05:00",
+    "gpsLocation": {
+      "latitude": 17.944468,
+      "longitude": -83.188009
+    },
+    "milesAway": 5.2332,
+    "acceptedClients": {
+      "men": true,
+      "women": true,
+      "children": true,
+      "veteran": true,
+      "handicap": true
+    },
+    "totalBeds": 47,
+    "occupiedBeds": 39,
+    "intakeStart": 1136,
+    "intakeEnd": 1256,
+    "description": "Quis culpa minim in commodo. Pariatur minim ex sunt ipsum in cillum adipisicing eiusmod irure ut commodo nostrud anim voluptate. Incididunt non incididunt ad eu sint enim deserunt magna et officia voluptate duis. Pariatur magna ea elit sit mollit elit non magna. Fugiat veniam anim dolore ea sunt in fugiat. Occaecat Lorem cillum culpa exercitation et ut exercitation voluptate.\r\n"
+  },
+  {
+    "id": "9cec44ed-3c3f-4ee2-a7ec-f0552a82152e",
+    "name": "ISOLOGIA",
+    "email": "lucyrasmussen@isologia.com",
+    "phone": "+1 (936) 484-3983",
+    "address": {
+      "line1": "248 Hope Street",
+      "line2": null,
+      "city": "Brady",
+      "state": "District Of Columbia",
+      "zip": 76404
+    },
+    "registered": "2016-09-03T07:00:57 +05:00",
+    "gpsLocation": {
+      "latitude": 54.082718,
+      "longitude": 34.319433
+    },
+    "milesAway": 1.9144,
+    "acceptedClients": {
+      "men": true,
+      "women": false,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 76,
+    "occupiedBeds": 70,
+    "intakeStart": 1266,
+    "intakeEnd": 1386,
+    "description": "Dolor quis duis velit ad ea ex nisi in esse ut esse dolore commodo. Ut Lorem voluptate duis laboris aliquip magna. Exercitation esse elit consectetur tempor. In labore magna quis ex esse qui in cillum labore ipsum magna officia incididunt. Reprehenderit Lorem officia eu in commodo reprehenderit non. In excepteur in est officia aute eiusmod sit dolor nostrud duis ex nostrud deserunt. Mollit elit duis id est eiusmod irure do exercitation et.\r\n"
+  },
+  {
+    "id": "e58f60c9-19d8-4679-aa64-4450c9579ba1",
+    "name": "ANDRYX",
+    "email": "lucyrasmussen@andryx.com",
+    "phone": "+1 (888) 594-2595",
+    "address": {
+      "line1": "924 Pilling Street",
+      "line2": null,
+      "city": "Starks",
+      "state": "North Dakota",
+      "zip": 38825
+    },
+    "registered": "2016-05-21T07:41:30 +05:00",
+    "gpsLocation": {
+      "latitude": 81.677581,
+      "longitude": 159.487487
+    },
+    "milesAway": 4.9641,
+    "acceptedClients": {
+      "men": true,
+      "women": true,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 41,
+    "occupiedBeds": 26,
+    "intakeStart": 1315,
+    "intakeEnd": 1435,
+    "description": "Est aliquip Lorem anim aliquip consectetur nisi cupidatat ea excepteur proident aliqua ipsum. Laborum duis enim ipsum nisi dolore. Occaecat consectetur laboris aliqua esse in laborum et Lorem in enim.\r\n"
+  },
+  {
+    "id": "119bf5db-9b57-40e9-afcd-728d4a47ec0d",
+    "name": "EQUITAX",
+    "email": "lucyrasmussen@equitax.com",
+    "phone": "+1 (981) 539-3046",
+    "address": {
+      "line1": "459 Driggs Avenue",
+      "line2": null,
+      "city": "Homeworth",
+      "state": "South Carolina",
+      "zip": 98082
+    },
+    "registered": "2014-06-02T10:24:29 +05:00",
+    "gpsLocation": {
+      "latitude": 58.008881,
+      "longitude": -70.243875
+    },
+    "milesAway": 3.6047,
+    "acceptedClients": {
+      "men": true,
+      "women": false,
+      "children": true,
+      "veteran": false,
+      "handicap": false
+    },
+    "totalBeds": 81,
+    "occupiedBeds": 79,
+    "intakeStart": 1274,
+    "intakeEnd": 1394,
+    "description": "Sint incididunt sit nostrud fugiat nostrud nulla minim Lorem magna. Deserunt dolor deserunt sit est tempor laborum dolore ullamco. Qui enim nulla esse aliquip sunt occaecat tempor eu culpa. Dolor eiusmod cillum minim reprehenderit aliqua.\r\n"
+  },
+  {
+    "id": "f4e6c874-cf61-4799-9f47-aa3d08675af8",
+    "name": "TEMORAK",
+    "email": "lucyrasmussen@temorak.com",
+    "phone": "+1 (948) 487-2648",
+    "address": {
+      "line1": "442 Orient Avenue",
+      "line2": null,
+      "city": "Blackgum",
+      "state": "Delaware",
+      "zip": 54155
+    },
+    "registered": "2016-08-27T08:57:49 +05:00",
+    "gpsLocation": {
+      "latitude": 83.28773,
+      "longitude": 121.581963
+    },
+    "milesAway": 7.197,
+    "acceptedClients": {
+      "men": false,
+      "women": true,
+      "children": false,
+      "veteran": true,
+      "handicap": false
+    },
+    "totalBeds": 66,
+    "occupiedBeds": 37,
+    "intakeStart": 1155,
+    "intakeEnd": 1275,
+    "description": "Eiusmod cillum ex consectetur ullamco veniam magna minim magna consectetur tempor. Et anim excepteur est eu ipsum esse eiusmod est ex magna aliqua minim. Et laborum aute Lorem pariatur ad nostrud. Occaecat labore adipisicing veniam duis in reprehenderit exercitation consectetur commodo do ex amet. Ullamco non aliqua consectetur nostrud enim cupidatat in fugiat reprehenderit non irure. Elit ullamco incididunt magna dolore est. Anim ipsum consectetur do ea anim sit labore ipsum.\r\n"
+  },
+  {
+    "id": "7fbe3d96-f026-4b93-a539-15b2f07e89b8",
+    "name": "QUARX",
+    "email": "lucyrasmussen@quarx.com",
+    "phone": "+1 (861) 415-3099",
+    "address": {
+      "line1": "239 Benson Avenue",
+      "line2": null,
+      "city": "Cornfields",
+      "state": "Pennsylvania",
+      "zip": 15860
+    },
+    "registered": "2014-02-01T04:23:36 +06:00",
+    "gpsLocation": {
+      "latitude": -4.410872,
+      "longitude": 107.883063
+    },
+    "milesAway": 0.9208,
+    "acceptedClients": {
+      "men": true,
+      "women": true,
+      "children": false,
+      "veteran": false,
+      "handicap": true
+    },
+    "totalBeds": 90,
+    "occupiedBeds": 77,
+    "intakeStart": 1215,
+    "intakeEnd": 1335,
+    "description": "Non amet laborum sint proident sit eu sit tempor Lorem duis dolor dolore occaecat. Nulla ea minim eu adipisicing consequat amet nisi exercitation culpa laboris ad amet et. Ea amet incididunt aliquip pariatur. Sunt reprehenderit sunt deserunt nostrud duis tempor laborum pariatur. Culpa ipsum velit ullamco minim veniam enim esse non.\r\n"
+  },
+  {
+    "id": "24015bd3-431c-405c-9830-230290aab49e",
+    "name": "XYMONK",
+    "email": "lucyrasmussen@xymonk.com",
+    "phone": "+1 (853) 440-2995",
+    "address": {
+      "line1": "328 Quay Street",
+      "line2": null,
+      "city": "Retsof",
+      "state": "New Jersey",
+      "zip": 71450
+    },
+    "registered": "2016-08-03T07:19:07 +05:00",
+    "gpsLocation": {
+      "latitude": 76.893808,
+      "longitude": 105.346572
+    },
+    "milesAway": 6.7883,
+    "acceptedClients": {
+      "men": false,
+      "women": false,
+      "children": true,
+      "veteran": false,
+      "handicap": false
+    },
+    "totalBeds": 36,
+    "occupiedBeds": 29,
+    "intakeStart": 1231,
+    "intakeEnd": 1351,
+    "description": "Irure qui cupidatat dolore anim proident ipsum reprehenderit non ad sunt exercitation dolore. Ea nulla qui deserunt est fugiat tempor non dolor tempor. Ad reprehenderit veniam voluptate enim ex laborum nisi officia sunt exercitation ex.\r\n"
+  },
+  {
+    "id": "7cdabc97-be83-4d72-b9bd-1c346a4f1805",
+    "name": "EMTRAC",
+    "email": "lucyrasmussen@emtrac.com",
+    "phone": "+1 (970) 419-2950",
+    "address": {
+      "line1": "955 Richardson Street",
+      "line2": null,
+      "city": "Campo",
+      "state": "New Hampshire",
+      "zip": 90364
+    },
+    "registered": "2015-10-06T09:00:54 +05:00",
+    "gpsLocation": {
+      "latitude": -24.244453,
+      "longitude": 98.053739
+    },
+    "milesAway": 5.7692,
+    "acceptedClients": {
+      "men": false,
+      "women": true,
+      "children": false,
+      "veteran": true,
+      "handicap": true
+    },
+    "totalBeds": 40,
+    "occupiedBeds": 40,
+    "intakeStart": 1190,
+    "intakeEnd": 1310,
+    "description": "Qui nostrud id cupidatat deserunt adipisicing exercitation magna. Aliquip pariatur nostrud adipisicing laboris ex esse. Ullamco nostrud eiusmod quis officia et reprehenderit excepteur ad ut consequat proident. Laborum incididunt cupidatat officia nisi laboris sint cupidatat aliqua sunt. Reprehenderit eiusmod esse consectetur eiusmod in fugiat in ullamco in nulla quis amet sunt amet.\r\n"
+  },
+  {
+    "id": "3d458278-758f-42c3-ae60-2fee5c8e2a6e",
+    "name": "MAINELAND",
+    "email": "lucyrasmussen@maineland.com",
+    "phone": "+1 (952) 589-3662",
+    "address": {
+      "line1": "482 Bartlett Street",
+      "line2": null,
+      "city": "Lavalette",
+      "state": "Iowa",
+      "zip": 70326
+    },
+    "registered": "2016-08-05T04:12:27 +05:00",
+    "gpsLocation": {
+      "latitude": -35.265148,
+      "longitude": -64.586792
+    },
+    "milesAway": 6.9724,
+    "acceptedClients": {
+      "men": true,
+      "women": false,
+      "children": false,
+      "veteran": true,
+      "handicap": true
+    },
+    "totalBeds": 55,
+    "occupiedBeds": 36,
+    "intakeStart": 1193,
+    "intakeEnd": 1313,
+    "description": "Ea ad et nostrud sit. Nisi ex amet eiusmod ad sint do adipisicing. Eiusmod Lorem reprehenderit velit occaecat excepteur excepteur eu officia. Labore id dolor deserunt et mollit officia ea occaecat aliqua. Exercitation non non esse esse exercitation.\r\n"
+  }
+]

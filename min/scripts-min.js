@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".shelter-toggle").click(function(){$(".more-info").slideToggle("slow");var e=$(this);e.text("Show Less"==e.text()?"Show More":"Show Less")})});
+$(document).ready(function(){$(".shelter-toggle").click(function(){$(".more-info").slideToggle("slow");var e=$(this);e.text("SHOW LESS"===e.text()?"SHOW MORE":"SHOW LESS")})});

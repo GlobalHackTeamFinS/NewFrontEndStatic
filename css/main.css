@@ -658,7 +658,7 @@ header {
       max-width: 1200px; } }
 
 .row {
-  padding: 0 15px; }
+  padding: 0; }
 
 footer {
   position: fixed;
@@ -674,17 +674,18 @@ footer {
 button.shelter-toggle {
   background: none;
   text-align: center;
-  color: #fff;
+  color: #46bfff;
   font-size: 14px;
   margin: 0px auto;
-  border: none;
-  margin-top: 20px; }
+  border: none; }
   @media (min-width: 600px) {
     button.shelter-toggle {
       margin-top: 30px; } }
 
 .shelter-list-component {
-  margin: 0px auto; }
+  margin: 0px auto;
+  border-bottom: 1px solid #ececec;
+  padding: 0 15px; }
   .shelter-list-component .title {
     margin: 15px auto;
     font-size: 24px;
@@ -697,7 +698,8 @@ button.shelter-toggle {
         font-size: 32px; } }
   .shelter-list-component section {
     width: 100%;
-    display: table; }
+    display: table;
+    padding-bottom: 20px; }
     @media (min-width: 768px) {
       .shelter-list-component section {
         width: 50%;
@@ -711,37 +713,37 @@ button.shelter-toggle {
         @media (min-width: 768px) {
           .shelter-list-component section .stats p {
             font-size: 32px; } }
-  .shelter-list-component .person-icons {
-    width: 60%;
-    margin: 30px auto;
-    text-align: center;
-    float: left; }
+  .shelter-list-component .person-icon-container {
+    display: table-cell;
+    width: 60%; }
     @media (min-width: 768px) {
-      .shelter-list-component .person-icons {
+      .shelter-list-component .person-icon-container {
         width: 50%;
         margin: 3px auto;
         text-align: center;
         float: right; } }
-    .shelter-list-component .person-icons .icon {
+    .shelter-list-component .person-icon-container .icon {
       width: 25%;
       display: inline-block;
       float: left; }
       @media (min-width: 600px) {
-        .shelter-list-component .person-icons .icon {
+        .shelter-list-component .person-icon-container .icon {
           width: 20%; } }
       @media (min-width: 768px) {
-        .shelter-list-component .person-icons .icon {
+        .shelter-list-component .person-icon-container .icon {
           width: 20%;
           float: right; } }
-      .shelter-list-component .person-icons .icon img {
-        height: 32px;
+      .shelter-list-component .person-icon-container .icon img {
+        height: 25px;
         display: block; }
         @media (min-width: 600px) {
-          .shelter-list-component .person-icons .icon img {
-            height: 42px; } }
-        @media (min-width: 600px) {
-          .shelter-list-component .person-icons .icon img {
+          .shelter-list-component .person-icon-container .icon img {
+            height: 42px;
             float: right; } }
+  .shelter-list-component .button-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right; }
 
 .more-info {
   display: none;
