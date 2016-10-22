@@ -651,19 +651,13 @@ footer {
   background-color: #ececec;
   text-align: center; }
 
-button.show-more {
-  width: 80px;
-  background-color: #46bfff;
+button.button-show {
+  background: none;
   text-align: center;
-  color: #fff;
-  font-family: 'Lato';
+  color: #46bfff;
   font-size: 14px;
-  display: block;
   margin: 0px auto;
   border: none; }
-
-button:hover {
-  background-color: #6C029F; }
 
 .shelter-list-component {
   margin: 0px auto; }
@@ -673,14 +667,14 @@ button:hover {
     text-align: center;
     color: #3b3b49;
     font-weight: 600; }
-  .shelter-list-component .stats-container {
+  .shelter-list-component section {
     width: 100%;
     display: table; }
-    .shelter-list-component .stats-container .stats {
+    .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
       text-align: center; }
-      .shelter-list-component .stats-container .stats p {
+      .shelter-list-component section .stats p {
         font-size: 24px; }
   .shelter-list-component .person-icons {
     width: 100%;
