@@ -699,7 +699,7 @@ button.shelter-toggle {
   .shelter-list-component section {
     width: 100%;
     display: table;
-    padding-bottom: 15px; }
+    padding-bottom: 20px; }
     @media (min-width: 768px) {
       .shelter-list-component section {
         width: 50%;
@@ -714,7 +714,8 @@ button.shelter-toggle {
           .shelter-list-component section .stats p {
             font-size: 32px; } }
   .shelter-list-component .person-icon-container {
-    display: table-cell; }
+    display: table-cell;
+    width: 60%; }
     @media (min-width: 768px) {
       .shelter-list-component .person-icon-container {
         width: 50%;
@@ -733,13 +734,11 @@ button.shelter-toggle {
           width: 20%;
           float: right; } }
       .shelter-list-component .person-icon-container .icon img {
-        height: 32px;
+        height: 25px;
         display: block; }
         @media (min-width: 600px) {
           .shelter-list-component .person-icon-container .icon img {
-            height: 42px; } }
-        @media (min-width: 600px) {
-          .shelter-list-component .person-icon-container .icon img {
+            height: 42px;
             float: right; } }
   .shelter-list-component .button-container {
     display: table-cell;

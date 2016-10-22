@@ -16,7 +16,7 @@
 	section {
 		width: 100%;
 		display: table;
-		padding-bottom: 15px;
+		padding-bottom: 20px;
 
 		@media (min-width: 768px){
 			width: 50%;
@@ -36,6 +36,7 @@
 	}
 	.person-icon-container {
 	    display: table-cell;
+	    width: 60%;
 
 	    @media (min-width: 768px) {
 	    	width: 50%;
@@ -58,13 +59,11 @@
 			}
 
 			img {
-				height: 32px;
+				height: 25px;
 				display: block;
 
 				@media (min-width: 600px){
 					height: 42px;
-				}
-				@media (min-width: 600px){
 					float: right;
 				}
 			}
