@@ -586,7 +586,7 @@ body {
   margin: 0px; }
 
 header {
-  height: 114px;
+  height: 120px;
   width: 100%;
   background-color: #6C029F; }
   header h1 {
@@ -599,16 +599,21 @@ header {
         text-align: left; } }
   header p {
     text-align: center;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
     color: #fff; }
     @media (min-width: 600px) {
       header p {
         text-align: right; } }
-  @media (min-width: 600px) {
-    header .title {
-      float: left;
-      width: 50%;
-      padding-top: 30px;
-      padding-left: 30px; } }
+  header .title {
+    padding-top: 10px; }
+    @media (min-width: 600px) {
+      header .title {
+        float: left;
+        width: 50%;
+        padding-top: 30px;
+        padding-left: 30px; } }
   @media (min-width: 600px) {
     header .your-location {
       float: right;
@@ -642,10 +647,24 @@ footer {
   background-color: #ececec;
   text-align: center; }
 
+button.show-more {
+  width: 80px;
+  background-color: #46bfff;
+  text-align: center;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 14px;
+  display: block;
+  margin: 0px auto;
+  border: none; }
+
+button:hover {
+  background-color: #6C029F; }
+
 .shelter-list-component {
   margin: 0px auto; }
   .shelter-list-component .title {
-    margin: 20px auto;
+    margin: 30px auto;
     font-size: 32px;
     text-align: center;
     color: #3b3b49;
@@ -666,11 +685,8 @@ footer {
     .shelter-list-component .person-icons .icon {
       width: 60px;
       display: inline-block;
-      margin: 30px auto; }
+      margin: 40px auto; }
       .shelter-list-component .person-icons .icon svg {
         height: 48px;
         display: block;
         margin: 0px auto; }
-  .shelter-list-component .show-more {
-    width: 100%;
-    text-align: center; }

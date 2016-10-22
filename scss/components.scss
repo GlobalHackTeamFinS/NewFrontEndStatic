@@ -1,7 +1,7 @@
 .shelter-list-component {
 	margin: 0px auto;
 	.title {
-		margin: 20px auto;
+		margin: 30px auto;
 		font-size: $large;
 		text-align: center;
 		color: $neutral-1;
@@ -26,17 +26,12 @@
 		.icon {
 			width: 60px;
 			display: inline-block;
-			margin: 30px auto;
+			margin: 40px auto;
 			svg {
 				height: 48px;
 			    display: block;
 	    		margin: 0px auto;
 			}
 		}
-	}
-	.show-more {
-		width: 100%;
-		text-align: center;
-	    
 	}
 }
