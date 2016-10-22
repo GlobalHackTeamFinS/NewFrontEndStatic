@@ -2,6 +2,10 @@
 	margin: 0px auto;
 	border-bottom: 1px solid $neutral-2;
 	padding: 0 15px;
+	@media (min-width: 600px) {
+		clear: both;
+	}
+
 	.title {
 		margin: 15px auto;
 		font-size: $large;
@@ -18,14 +22,28 @@
 		display: table;
 		padding-bottom: 20px;
 
-		@media (min-width: 768px){
+		@media (min-width: 600px){
 			width: 50%;
-    		float: left;
+    		//float: left;
+    		display: initial;
 		}
 		.stats {
 			display: table-cell;
 			width: 33.3%;
 			text-align: center;
+
+			@media (min-width: 600px) {
+				display: inline-block;
+			    text-align: center;
+			    margin-right: 9px;
+			    width: auto;
+			}
+			@media (min-width: 768px) {
+				display: inline-block;
+			    text-align: center;
+			    margin-right: 35px;
+			    width: auto;
+			}
 			p {
 				font-size: $large;
 				@media (min-width: 768px){
@@ -38,7 +56,7 @@
 	    display: table-cell;
 	    width: 60%;
 
-	    @media (min-width: 768px) {
+	    @media (min-width: 600px) {
 	    	width: 50%;
 		    margin: 3px auto;
 		    text-align: center;
@@ -52,10 +70,7 @@
 
 			@media (min-width: 600px){
 				width: 20%;
-			}
-			@media (min-width: 768px){
-				width: 20%;
-    			float: right;
+				float: right;
 			}
 
 			img {
@@ -73,6 +88,9 @@
 		display: table-cell;
 		vertical-align: middle;
 		text-align: right;
+		@media (min-width: 600px) {
+			display: block;
+		}
 	}
 }
 .more-info {
