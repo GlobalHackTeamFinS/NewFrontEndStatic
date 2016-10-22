@@ -703,8 +703,7 @@ button:hover {
     text-align: center; }
     .shelter-list-component .person-icons .icon {
       width: 60px;
-      display: inline-block;
-      margin: 30px auto; }
+      display: inline-block; }
       .shelter-list-component .person-icons .icon img {
         height: 48px;
         display: block;
