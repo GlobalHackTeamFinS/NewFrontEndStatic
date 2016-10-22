@@ -1,5 +1,6 @@
 body {
 	margin: 0px;
+	padding-bottom: 115px;
 }
 header {
 	height: 120px;
@@ -62,6 +63,20 @@ header {
 }
 .container {
 	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	@media (min-width: 600px) {
+		max-width: 600px;
+	}
+	@media (min-width: 768px) {
+		max-width: 768px;
+	}
+	@media (min-width: 992px) {
+		max-width: 992px;
+	}
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+	}
 }
 footer {
 	position: fixed;
