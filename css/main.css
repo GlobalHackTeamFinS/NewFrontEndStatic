@@ -672,22 +672,16 @@ footer {
   text-align: center; }
 
 button.shelter-toggle {
-  width: 80px;
-  background-color: #46bfff;
+  background: none;
   text-align: center;
   color: #fff;
-  font-family: 'Lato';
   font-size: 14px;
-  display: block;
   margin: 0px auto;
   border: none;
   margin-top: 20px; }
   @media (min-width: 600px) {
     button.shelter-toggle {
       margin-top: 30px; } }
-
-button:hover {
-  background-color: #6C029F; }
 
 .shelter-list-component {
   margin: 0px auto; }
@@ -701,21 +695,21 @@ button:hover {
       .shelter-list-component .title {
         margin: 30px auto;
         font-size: 32px; } }
-  .shelter-list-component .stats-container {
+  .shelter-list-component section {
     width: 100%;
     display: table; }
     @media (min-width: 768px) {
-      .shelter-list-component .stats-container {
+      .shelter-list-component section {
         width: 50%;
         float: left; } }
-    .shelter-list-component .stats-container .stats {
+    .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
       text-align: center; }
-      .shelter-list-component .stats-container .stats p {
+      .shelter-list-component section .stats p {
         font-size: 24px; }
         @media (min-width: 768px) {
-          .shelter-list-component .stats-container .stats p {
+          .shelter-list-component section .stats p {
             font-size: 32px; } }
   .shelter-list-component .person-icons {
     width: 60%;
@@ -750,6 +744,7 @@ button:hover {
             float: right; } }
 
 .more-info {
+  display: none;
   background-color: #ececec;
   color: #3b3b49;
   margin-top: 30px;

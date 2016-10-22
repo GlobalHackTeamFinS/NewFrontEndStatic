@@ -1,24 +1,19 @@
 button.shelter-toggle {
-  width: 80px;
-  background-color: #46bfff;
-  text-align: center;
-  color: #fff;
-  font-family: 'Lato';
-  font-size: 14px;
-  display: block;
-  margin: 0px auto;
-  border:none;
-  margin-top: 20px;
-  @media (min-width: 600px){
-    margin-top: 30px;
-  }
+	background: none;
+	text-align: center;
+	color: #fff;
+	font-size: $small-normal;
+	margin: 0px auto;
+	border:none;
+	margin-top: 20px;
+	@media (min-width: 600px){
+		margin-top: 30px;
+	}
+}
+button:hover {
 
-  }
+}
 
-  button:hover {
-    background-color: $base-color;
-  }
+button:focus {
 
-  button:focus {
-
-  }
+}

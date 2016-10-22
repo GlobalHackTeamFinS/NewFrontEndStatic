@@ -11,7 +11,7 @@
 			font-size: $xl;
 		}
 	}
-	.stats-container {
+	section {
 		width: 100%;
 		display: table;
 
@@ -72,6 +72,7 @@
 	}
 }
 .more-info {
+	display: none;
 	background-color: $neutral-2;
 	color: $neutral-1;
 	margin-top: 30px;

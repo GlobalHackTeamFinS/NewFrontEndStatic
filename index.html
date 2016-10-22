@@ -36,7 +36,7 @@
           <div class="row">
             <div class="shelter-list-component">
               <h1 class="title"><?php echo $user['provider'] ?></h1>
-              <div class="stats-container">
+              <section class="stats-container">
                 <div class="stats open-beds">
                   <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
                   <h3>Beds Open</h3>
@@ -55,7 +55,8 @@
                   <p><?php echo $user['milesAway'] ?></p>
                   <h3>Miles Away</h3>
                 </div>
-              </div>
+              </section>
+              <section>
               <div class="person-icons">
                 <div class="icon">
                   <img src="/images/male_icon.svg">
@@ -70,10 +71,9 @@
                   <img src="/images/male_icon.svg">
                 </div>
               </div>
-              <button class="show-more">Show More</button>
+              <button class="shelter-toggle">SHOW MORE</button>
+              </section>
             </div>
-          </div>
-
         </div>
 
         <section class="more-info">
