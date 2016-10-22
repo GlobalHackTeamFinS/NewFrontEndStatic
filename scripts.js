@@ -3,8 +3,10 @@ $(document).ready(function () {
   	var parentComponent = $(this).parents('.shelter-list-component');
   	if (parentComponent.hasClass('open')){
   		parentComponent.removeClass('open');
+  		$(this).text('SHOW MORE');
   	} else {
   		parentComponent.addClass('open');
+  		$(this).text('SHOW LESS');
   	}
   });
 });
