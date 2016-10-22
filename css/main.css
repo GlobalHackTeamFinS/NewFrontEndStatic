@@ -681,7 +681,8 @@ button.shelter-toggle {
   @media (min-width: 600px) {
     button.shelter-toggle {
       margin-top: 15px;
-      margin-bottom: 15px; } }
+      margin-bottom: 25px;
+      font-size: 16px; } }
 
 .shelter-list-component {
   margin: 0px auto;
@@ -696,6 +697,9 @@ button.shelter-toggle {
     text-align: center;
     color: #3b3b49;
     font-weight: 600; }
+    @media (min-width: 600px) {
+      .shelter-list-component .title {
+        text-align: left; } }
     @media (min-width: 768px) {
       .shelter-list-component .title {
         margin: 30px auto;
