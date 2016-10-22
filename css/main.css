@@ -660,8 +660,9 @@ header {
     .container {
       max-width: 1200px; } }
 
-.row {
-  padding: 0; }
+@media (min-width: 600px) {
+  .row {
+    padding: 0 15px; } }
 
 footer {
   position: fixed;
@@ -687,9 +688,11 @@ button.shelter-toggle {
       margin-bottom: 25px;
       font-size: 16px; } }
 
-.shelter-list-component {
-  margin: 0px auto;
+.list-border {
   border-bottom: 1px solid #ececec; }
+
+.shelter-list-component {
+  margin: 0px auto; }
   @media (min-width: 600px) {
     .shelter-list-component {
       clear: both; } }
@@ -713,7 +716,8 @@ button.shelter-toggle {
     @media (min-width: 600px) {
       .shelter-list-component section {
         width: 50%;
-        display: initial; } }
+        display: initial;
+        padding: 0 0px 20px; } }
     .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
@@ -772,8 +776,9 @@ button.shelter-toggle {
     display: block;
     background-color: #ececec;
     color: #3b3b49;
-    margin-top: 30px;
-    clear: both; }
+    margin-top: 0px;
+    clear: both;
+    width: 100%; }
     .shelter-list-component.open .more-info address {
       margin: 0px auto; }
       .shelter-list-component.open .more-info address a {

@@ -81,7 +81,9 @@ header {
 	}
 }
 .row {
-	padding: 0;
+	@media (min-width: 600px) {
+		padding: 0 15px;
+	}
 }
 
 footer {
