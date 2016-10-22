@@ -605,6 +605,9 @@ header {
         width: 50%;
         padding-top: 30px;
         padding-left: 30px; } }
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 32px; } }
   header p {
     text-align: center;
     color: #fff;
@@ -622,8 +625,7 @@ header {
   @media (min-width: 600px) {
     header .your-location {
       float: right;
-      padding-top: 20px;
-      padding-right: 30px; }
+      padding-top: 20px; }
       header .your-location p.change {
         margin-top: 12px;
         font-weight: 600; }
@@ -683,11 +685,15 @@ button.shelter-toggle {
 .shelter-list-component {
   margin: 0px auto; }
   .shelter-list-component .title {
-    margin: 30px auto;
+    margin: 15px auto;
     font-size: 24px;
     text-align: center;
     color: #3b3b49;
     font-weight: 600; }
+    @media (min-width: 768px) {
+      .shelter-list-component .title {
+        margin: 30px auto;
+        font-size: 32px; } }
   .shelter-list-component section {
     width: 100%;
     display: table; }
@@ -701,6 +707,9 @@ button.shelter-toggle {
       text-align: center; }
       .shelter-list-component section .stats p {
         font-size: 24px; }
+        @media (min-width: 768px) {
+          .shelter-list-component section .stats p {
+            font-size: 32px; } }
   .shelter-list-component .person-icon-container {
     display: table-cell; }
     @media (min-width: 768px) {

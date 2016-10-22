@@ -1,11 +1,15 @@
 .shelter-list-component {
 	margin: 0px auto;
 	.title {
-		margin: 30px auto;
+		margin: 15px auto;
 		font-size: $large;
 		text-align: center;
 		color: $neutral-1;
 		font-weight: $bold;
+		@media (min-width: 768px) {
+			margin: 30px auto;
+			font-size: $xl;
+		}
 	}
 	section {
 		width: 100%;
@@ -21,6 +25,9 @@
 			text-align: center;
 			p {
 				font-size: $large;
+				@media (min-width: 768px){
+					font-size: $xl;
+				}
 			}
 		}
 	}
