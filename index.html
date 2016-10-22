@@ -30,41 +30,42 @@
       <div class="container">
         <div class="shelter-list-component">
           <h1 class="title"><?php echo $user['provider'] ?></h1>
-        <div class="stats-container">
-          <div class="stats open-beds">
-            <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
-            <h3>Beds Open</h3>
+          <div class="stats-container">
+            <div class="stats open-beds">
+              <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
+              <h3>Beds Open</h3>
+            </div>
+            <div class="stats doors-close">
+              <p>
+                <?php 
+                  $to_time = strtotime("2008-12-13 10:42:00");
+                  $from_time = strtotime("2008-12-13 10:21:00");
+                  echo round(abs($to_time - $from_time) / 60,2). " min"; 
+                ?>
+              </p>
+              <h3>Doors Close</h3>
+            </div>
+            <div class="stats miles-away">
+              <p><?php echo $user['milesAway'] ?></p>
+              <h3>Miles Away</h3>
+            </div>
           </div>
-          <div class="stats doors-close">
-            <p>
-              <?php 
-                $to_time = strtotime("2008-12-13 10:42:00");
-                $from_time = strtotime("2008-12-13 10:21:00");
-                echo round(abs($to_time - $from_time) / 60,2). " min"; 
-              ?>
-            </p>
-            <h3>Doors Close</h3>
+          <div class="person-icons">
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
           </div>
-          <div class="stats miles-away">
-            <p><?php echo $user['milesAway'] ?></p>
-            <h3>Miles Away</h3>
-          </div>
+          <button class="show-more">Show More</button>
         </div>
-        <div class="person-icons">
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-        </div>
-        <button class="show-more">Show More</button>
       </div>
     <?php } ?> 
     <!-- END FOR EACH -->
