@@ -26,12 +26,30 @@
 		.icon {
 			width: 60px;
 			display: inline-block;
-			margin: 40px auto;
-			svg {
+			margin: 30px auto;
+			img{
 				height: 48px;
 			    display: block;
 	    		margin: 0px auto;
 			}
+		}
+	}
+}
+
+
+.more-info {
+	background-color: $neutral-2;
+	color: $neutral-1;
+	margin-top: 30px;
+	padding: 10px;
+
+	address {
+		width:80%;
+		margin: 0px auto;
+
+		a {
+			color: $action-color;
+			text-decoration: none;
 		}
 	}
 }

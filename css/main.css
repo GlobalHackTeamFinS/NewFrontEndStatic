@@ -689,8 +689,20 @@ button:hover {
     .shelter-list-component .person-icons .icon {
       width: 60px;
       display: inline-block;
-      margin: 40px auto; }
-      .shelter-list-component .person-icons .icon svg {
+      margin: 30px auto; }
+      .shelter-list-component .person-icons .icon img {
         height: 48px;
         display: block;
         margin: 0px auto; }
+
+.more-info {
+  background-color: #ececec;
+  color: #3b3b49;
+  margin-top: 30px;
+  padding: 10px; }
+  .more-info address {
+    width: 80%;
+    margin: 0px auto; }
+    .more-info address a {
+      color: #46bfff;
+      text-decoration: none; }
