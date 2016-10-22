@@ -1,94 +1,148 @@
+$notbrightblue: #6C029F;
 $brightblue: #46bfff;
+$lightgrey: #ececec;
+$textblack: #3b3b49;
+$darkblue: #385573;
+$pink: #ff4db6;
+$green: #0dff8e;
+$white: #fff;
+
+
 $font-stack:   'Lato', sans-serif;
+
 
 body {
 	margin: 0px;
 }
+
+h1, h2, h3 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	margin: 0px;
+}
+p {
+	font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		margin: 0px;
+}
+
 #header {
 	height: 114px;
 	width: 100%;
-	background-color: $brightblue;
+	background-color: $notbrightblue;
 	h1 {
 		text-align: center;
 		font-size: 32px;
+		color: $white;
+		letter-spacing: 2px;
 		@media (min-width: 600px) {
 			text-align: left;
 		}
 	}
 	p {
 		text-align: center;
+		color: $white;
+
 		@media (min-width: 600px) {
 			text-align: right;
 		}
 	}
-	@media (min-width: 600px) {
-		.title {
+	.title {
+		@media (min-width: 600px) {
 			float: left;
 			width: 50%;
+			padding-left: 30px;
+			padding-top: 30px;
 		}
 	}
-}
 
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  margin: 0px; 
-}
-p {
-	font-family: 'Lato', sans-serif;
-  	font-weight: 300;
-  	margin: 0px;
-}
-.stats {
-	display: inline;
-	float: left;
-	width: 33.333%;
-	p {
-		text-align: center;
+	.your-location {
+		@media (min-width: 600px) {
+			float: right;
+			padding-right: 30px;
+			padding-top: 20px;
+			p.change {
+				margin-top: 12px;
+				font-weight: 600;
+			}
+			a {
+				background-color: $white;
+				margin-top: 20px;
+				text-align: right;
+				color: $notbrightblue;
+				padding: 3px;
+				text-decoration: none;
+
+			}
+			a:hover {
+				background-color: $brightblue;
+				color: $white;
+			}
+
+		}
 	}
+
 }
 
-.person-icons {
-	width: 60%;
-	float: left;
-	.icon {
-		width: 25%;
+.container {
+	position: relative;
+}
+.shelter-list-component {
+
+	margin: 0px auto;
+
+	.title {
+		margin: 20px 30px;
+		font-size: 1.5em;
+	}
+
+	.stats {
+		display: inline;
 		float: left;
-		svg {
-			height: 48px;
-		    display: block;
-    		margin: 0px auto;
+		width: 20%;
+		text-align: center;
+		p {
+			font-size: 32px;
+		}
+
+		h3 {
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 		}
 	}
+
+	.person-icons {
+		width: 40%;
+		float: right;
+		.icon {
+			width: 20%;
+			float: left;
+			svg {
+				height: 48px;
+			    display: block;
+	    		margin: 0px auto;
+			}
+		}
+	}
+
+	.show-more {
+		width: 40%;
+	    float: right;
+	    p {
+	    	text-align: right;
+	    }
+		}
 }
 
-.show-more {
-	width: 40%;
-    float: right;
-    p {
-    	text-align: right;
-    }
+footer {
+	position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  padding: 1rem;
+		width:100%;
+		height: 80px;
+	  background-color: $lightgrey;
+	  text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
