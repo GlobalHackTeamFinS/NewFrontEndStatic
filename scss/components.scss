@@ -1,41 +1,33 @@
 .shelter-list-component {
 	margin: 0px auto;
-
 	.title {
 		margin: 30px auto;
-		font-size: 1.5em;
+		font-size: $large;
 		text-align: center;
-		color: #3b3b49;
-		font-weight: 600;
+		color: $neutral-1;
+		font-weight: $bold;
 	}
-
 	.stats-container {
 	  width: 100%;
 		.stats {
 			display: inline;
-	    float: left;
-	    width: 33.3%;
-	    text-align: center;
+		    float: left;
+		    width: 33.3%;
+		    text-align: center;
 			p {
-				font-size: 28px;
-			}
-
-			h3 {
-				font-size: 12px;
-				text-transform: uppercase;
-				letter-spacing: 1px;
+				font-size: $large;
 			}
 		}
 	}
-
 	.person-icons {
 		width: 100%;
-    text-align: center;
+		margin: 30px auto;
+    	text-align: center;
 		.icon {
 			width: 60px;
 			display: inline-block;
-			margin: 40px auto;
-			svg {
+			margin: 30px auto;
+			img{
 				height: 48px;
 			    display: block;
 	    		margin: 0px auto;

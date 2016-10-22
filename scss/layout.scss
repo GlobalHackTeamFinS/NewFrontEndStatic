@@ -7,45 +7,43 @@ header {
 	background-color: $base-color;
 	h1 {
 		text-align: center;
-		font-size: 32px;
+		font-size: $large;
 		color: $neutral-3;
 		letter-spacing: 2px;
+		padding-top: 10px;
 		@media (min-width: $break-desktop) {
 			text-align: left;
+			float: left;
+			width: 50%;
+			padding-top: 30px;
+			padding-left: 30px;
 		}
 	}
 	p {
 		text-align: center;
-		color: #fff;
-		font-size: 14px;
-		text-align: center;
 		color: $neutral-3;
-
+		font-size: $small-normal;
+		color: $neutral-3;
 		@media (min-width: $break-desktop) {
 			text-align: right;
 		}
 	}
-	.title {
-		padding-top: 10px;
-		@media (min-width: $break-desktop) {
-			float: left;
-			width: 50%;
-			padding-left: 30px;
-			padding-top: 30px;
-		}
+	a {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: $action-color;
+		font-size: $small-bold;
 	}
 
 	.your-location {
-
-
-
 		@media (min-width: $break-desktop) {
 			float: right;
-			padding-right: 30px;
 			padding-top: 20px;
+			padding-right: 30px;
 			p.change {
 				margin-top: 12px;
-				font-weight: 600;
+				font-weight: $bold;
 			}
 			a {
 				background-color: $neutral-3;
@@ -54,7 +52,6 @@ header {
 				color: $base-color;
 				padding: 3px;
 				text-decoration: none;
-
 			}
 			a:hover {
 				background-color: $action-color;
@@ -67,12 +64,13 @@ header {
 	position: relative;
 }
 footer {
-		position: fixed;
-	  right: 0;
-	  bottom: 0;
-	  left: 0;
-	  padding: 1rem;
-		width:100%;
-	  background-color: $neutral-2;
-	  text-align: center;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	width: 100%;
+	height: 80px;
+	background-color: $neutral-2;
+	text-align: center;
 }
