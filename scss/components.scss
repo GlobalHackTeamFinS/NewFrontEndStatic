@@ -1,5 +1,7 @@
 .shelter-list-component {
 	margin: 0px auto;
+	border-bottom: 1px solid $neutral-2;
+	padding: 0 15px;
 	.title {
 		margin: 15px auto;
 		font-size: $large;
@@ -14,6 +16,7 @@
 	section {
 		width: 100%;
 		display: table;
+		padding-bottom: 15px;
 
 		@media (min-width: 768px){
 			width: 50%;

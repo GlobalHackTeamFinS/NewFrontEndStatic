@@ -658,7 +658,7 @@ header {
       max-width: 1200px; } }
 
 .row {
-  padding: 0 15px; }
+  padding: 0; }
 
 footer {
   position: fixed;
@@ -683,7 +683,9 @@ button.shelter-toggle {
       margin-top: 30px; } }
 
 .shelter-list-component {
-  margin: 0px auto; }
+  margin: 0px auto;
+  border-bottom: 1px solid #ececec;
+  padding: 0 15px; }
   .shelter-list-component .title {
     margin: 15px auto;
     font-size: 24px;
@@ -696,7 +698,8 @@ button.shelter-toggle {
         font-size: 32px; } }
   .shelter-list-component section {
     width: 100%;
-    display: table; }
+    display: table;
+    padding-bottom: 15px; }
     @media (min-width: 768px) {
       .shelter-list-component section {
         width: 50%;
