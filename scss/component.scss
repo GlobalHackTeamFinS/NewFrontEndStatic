@@ -1,0 +1,45 @@
+.shelter-list-component {
+	margin: 0px auto;
+
+	.title {
+		margin: 20px 30px;
+		font-size: 1.5em;
+	}
+
+	.stats {
+		display: inline;
+		float: left;
+		width: 20%;
+		text-align: center;
+		p {
+			font-size: 32px;
+		}
+
+		h3 {
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
+	.person-icons {
+		width: 40%;
+		float: right;
+		.icon {
+			width: 20%;
+			float: left;
+			svg {
+				height: 48px;
+			    display: block;
+	    		margin: 0px auto;
+			}
+		}
+	}
+
+	.show-more {
+		width: 40%;
+	    float: right;
+	    p {
+	    	text-align: right;
+	    }
+	}
+}
