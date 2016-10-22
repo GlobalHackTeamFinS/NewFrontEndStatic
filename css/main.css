@@ -643,26 +643,6 @@ header {
         background-color: #46bfff;
         color: #fff; } }
 
-.container {
-  position: relative;
-  width: 100%;
-  margin: 0 auto; }
-  @media (min-width: 600px) {
-    .container {
-      max-width: 600px; } }
-  @media (min-width: 768px) {
-    .container {
-      max-width: 768px; } }
-  @media (min-width: 992px) {
-    .container {
-      max-width: 992px; } }
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 1200px; } }
-
-.row {
-  padding: 0; }
-
 footer {
   position: fixed;
   right: 0;
