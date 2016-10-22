@@ -585,7 +585,8 @@ p {
   margin: 0; }
 
 body {
-  margin: 0px; }
+  margin: 0px;
+  padding-bottom: 115px; }
 
 header {
   height: 120px;
@@ -638,7 +639,21 @@ header {
         color: #fff; } }
 
 .container {
-  position: relative; }
+  position: relative;
+  width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 600px) {
+    .container {
+      max-width: 600px; } }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px; } }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 992px; } }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px; } }
 
 footer {
   position: fixed;
@@ -674,10 +689,10 @@ button:hover {
     color: #3b3b49;
     font-weight: 600; }
   .shelter-list-component .stats-container {
-    width: 100%; }
+    width: 100%;
+    display: table; }
     .shelter-list-component .stats-container .stats {
-      display: inline;
-      float: left;
+      display: table-cell;
       width: 33.3%;
       text-align: center; }
       .shelter-list-component .stats-container .stats p {
@@ -688,8 +703,7 @@ button:hover {
     text-align: center; }
     .shelter-list-component .person-icons .icon {
       width: 60px;
-      display: inline-block;
-      margin: 30px auto; }
+      display: inline-block; }
       .shelter-list-component .person-icons .icon img {
         height: 48px;
         display: block;
