@@ -642,31 +642,36 @@ footer {
 .shelter-list-component {
   margin: 0px auto; }
   .shelter-list-component .title {
-    margin: 20px 30px;
-    font-size: 1.5em; }
-  .shelter-list-component .stats {
-    display: inline;
-    float: left;
-    width: 20%;
-    text-align: center; }
-    .shelter-list-component .stats p {
-      font-size: 32px; }
-    .shelter-list-component .stats h3 {
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 2px; }
+    margin: 20px auto;
+    font-size: 1.5em;
+    text-align: center;
+    color: #3b3b49;
+    font-weight: 600; }
+  .shelter-list-component .stats-container {
+    width: 100%; }
+    .shelter-list-component .stats-container .stats {
+      display: inline;
+      float: left;
+      width: 33.3%;
+      text-align: center; }
+      .shelter-list-component .stats-container .stats p {
+        font-size: 28px; }
+      .shelter-list-component .stats-container .stats h3 {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
   .shelter-list-component .person-icons {
-    width: 40%;
-    float: right; }
+    width: 100%;
+    margin: 30px auto;
+    text-align: center; }
     .shelter-list-component .person-icons .icon {
-      width: 20%;
-      float: left; }
+      width: 60px;
+      display: inline-block;
+      margin: 30px auto; }
       .shelter-list-component .person-icons .icon svg {
         height: 48px;
         display: block;
         margin: 0px auto; }
   .shelter-list-component .show-more {
-    width: 40%;
-    float: right; }
-    .shelter-list-component .show-more p {
-      text-align: right; }
+    width: 100%;
+    text-align: center; }

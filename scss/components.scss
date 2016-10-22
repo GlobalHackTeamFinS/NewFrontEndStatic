@@ -2,31 +2,40 @@
 	margin: 0px auto;
 
 	.title {
-		margin: 20px 30px;
+		margin: 20px auto;
 		font-size: 1.5em;
-	}
-
-	.stats {
-		display: inline;
-		float: left;
-		width: 20%;
 		text-align: center;
-		p {
-			font-size: 32px;
-		}
+		color: #3b3b49;
+		font-weight: 600;
+	}
 
-		h3 {
-			font-size: 16px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
+	.stats-container {
+	  width: 100%;
+		.stats {
+			display: inline;
+	    float: left;
+	    width: 33.3%;
+	    text-align: center;
+			p {
+				font-size: 28px;
+			}
+
+			h3 {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
 		}
 	}
+
 	.person-icons {
-		width: 40%;
-		float: right;
+		width: 100%;
+		margin: 30px auto;
+    text-align: center;
 		.icon {
-			width: 20%;
-			float: left;
+			width: 60px;
+			display: inline-block;
+			margin: 30px auto;
 			svg {
 				height: 48px;
 			    display: block;
@@ -35,11 +44,10 @@
 		}
 	}
 
+
 	.show-more {
-		width: 40%;
-	    float: right;
-	    p {
-	    	text-align: right;
-	    }
+		width: 100%;
+		text-align: center;
+	    
 	}
 }
