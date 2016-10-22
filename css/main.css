@@ -735,6 +735,7 @@ button.shelter-toggle {
             float: right; } }
 
 .more-info {
+  display: none;
   background-color: #ececec;
   color: #3b3b49;
   margin-top: 30px;
