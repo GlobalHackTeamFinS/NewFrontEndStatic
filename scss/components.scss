@@ -43,3 +43,21 @@
 		}
 	}
 }
+
+
+.more-info {
+	background-color: $neutral-2;
+	color: $neutral-1;
+	margin-top: 30px;
+	padding: 10px;
+
+	address {
+		width:80%;
+		margin: 0px auto;
+
+		a {
+			color: $action-color;
+			text-decoration: none;
+		}
+	}
+}
