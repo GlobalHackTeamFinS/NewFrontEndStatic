@@ -8,12 +8,12 @@
 		font-weight: $bold;
 	}
 	.stats-container {
-	  width: 100%;
+		width: 100%;
+		display: table;
 		.stats {
-			display: inline;
-		    float: left;
-		    width: 33.3%;
-		    text-align: center;
+			display: table-cell;
+			width: 33.3%;
+			text-align: center;
 			p {
 				font-size: $large;
 			}
@@ -22,21 +22,19 @@
 	.person-icons {
 		width: 100%;
 		margin: 30px auto;
-    	text-align: center;
+		text-align: center;
 		.icon {
-			width: 60px;
-			display: inline-block;
-			margin: 30px auto;
-			img{
-				height: 48px;
-			    display: block;
-	    		margin: 0px auto;
+		width: 60px;
+		display: inline-block;
+		margin: 30px auto;
+		img {
+			height: 48px;
+			display: block;
+			margin: 0px auto;
 			}
 		}
 	}
 }
-
-
 .more-info {
 	background-color: $neutral-2;
 	color: $neutral-1;
@@ -46,7 +44,6 @@
 	address {
 		width:80%;
 		margin: 0px auto;
-
 		a {
 			color: $action-color;
 			text-decoration: none;
