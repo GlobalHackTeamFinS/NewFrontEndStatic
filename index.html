@@ -30,7 +30,7 @@
       // Set some options - we are passing in a useragent too here
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,
-          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCF25VMhNe1GmYHpgzxiOFou8DLtMcsxPk',
+          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address=20+West+Pine+Street,+Springfield,+IL&key=AIzaSyCF25VMhNe1GmYHpgzxiOFou8DLtMcsxPk',
           CURLOPT_USERAGENT => 'Codular Sample cURL Request'
       ));
       // Send the request & save response to $resp
@@ -41,6 +41,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
+      
     ?>
 
     <section class="main-container">
@@ -48,6 +49,17 @@
       <?php
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
+        // usort(
+        //   $json_a, 
+        //   function($a, $b) { 
+        //     if ($a['milesAway'] == $b['milesAway']) {
+        //       return 0;
+        //     }
+        //     return ($a['milesAway'] < $b['milesAway']) ? -1 : 1;
+        // });
+        // $json = json_encode($json_arr);
+
+        // $json_a = json_decode($json, true);
       ?>
 
       <!-- START FOR EACH -->
@@ -77,13 +89,14 @@
 
                     $shelterLng = $user['gpsLocation']['longitude'];
                     $shelterLat = $user['gpsLocation']['latitude'];
+                    
 
                     // Get cURL resource
                     $curl = curl_init();
                     // Set some options - we are passing in a useragent too here
                     curl_setopt_array($curl, array(
                         CURLOPT_RETURNTRANSFER => 1,
-                        CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLat.'%'.$shelterLng.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
+                        CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLng.'%'.$shelterLat.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
                         CURLOPT_USERAGENT => 'Codular Sample cURL Request'
                     ));
                     // Send the request & save response to $resp
