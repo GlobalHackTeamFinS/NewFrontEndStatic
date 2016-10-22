@@ -41,7 +41,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-      
+
     ?>
 
     <section class="main-container">
@@ -50,8 +50,8 @@
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
         // usort(
-        //   $json_a, 
-        //   function($a, $b) { 
+        //   $json_a,
+        //   function($a, $b) {
         //     if ($a['milesAway'] == $b['milesAway']) {
         //       return 0;
         //     }
@@ -63,7 +63,7 @@
       ?>
 
       <!-- START FOR EACH -->
-      
+
       <?php foreach ($json_a as $users => $user) { ?>
         <div class="list-border">
           <div class="container">
@@ -87,11 +87,11 @@
                   </div>
                   <div class="stats miles-away">
                     <p>
-                      <?php 
+                      <?php
 
                       $shelterLng = $user['gpsLocation']['longitude'];
                       $shelterLat = $user['gpsLocation']['latitude'];
-                      
+
 
                       // Get cURL resource
                       $curl = curl_init();
@@ -108,7 +108,7 @@
 
                       $respDecoded = json_decode($resp, true);
                       $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
-                      
+
                       if ($miles != NULL) {
                         echo str_replace("mi","",$miles);
                       } else {
@@ -156,7 +156,7 @@
                   <div class="container">
                     <div class="row">
                       <address>
-                      <p class="phone"><?php echo $user['phone'] ?></p>
+                      <a href="tel:<?php echo $user['phone'] ?>"><?php echo $user['phone'] ?></a>
                       <ul class="address">
                         <li><?php echo $user['address']['line1'] ?></li>
                         <?php
@@ -177,7 +177,7 @@
         </div>
       <?php } ?>
       <!-- END FOR EACH -->
-        
+
     </section>
 
     <footer>
