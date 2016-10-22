@@ -20,54 +20,53 @@
     </header>
 
     <!-- PARSE JSON -->
-    <?php 
+    <?php
       $string = file_get_contents("shelters.json");
       $json_a = json_decode($string, true);
     ?>
-    
+
     <!-- START FOR EACH -->
     <?php foreach ($json_a as $users => $user) { ?>
       <div class="container">
         <div class="shelter-list-component">
           <h1 class="title"><?php echo $user['provider'] ?></h1>
-        <div class="stats-container">
-          <div class="stats open-beds">
-            <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
-            <h3>Beds Open</h3>
+          <div class="stats-container">
+            <div class="stats open-beds">
+              <p><?php echo $user['totalBeds'] - $user['occupiedBeds'] ?></p>
+              <h3>Beds Open</h3>
+            </div>
+            <div class="stats doors-close">
+              <p>
+                <?php
+                  $to_time = strtotime("2008-12-13 10:42:00");
+                  $from_time = strtotime("2008-12-13 10:21:00");
+                  echo round(abs($to_time - $from_time) / 60,2). " min";
+                ?>
+              </p>
+              <h3>Doors Close</h3>
+            </div>
+            <div class="stats miles-away">
+              <p><?php echo $user['milesAway'] ?></p>
+              <h3>Miles Away</h3>
+            </div>
           </div>
-          <div class="stats doors-close">
-            <p>
-              <?php 
-                $to_time = strtotime("2008-12-13 10:42:00");
-                $from_time = strtotime("2008-12-13 10:21:00");
-                echo round(abs($to_time - $from_time) / 60,2). " min"; 
-              ?>
-            </p>
-            <h3>Doors Close</h3>
+          <div class="person-icons">
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
+            <div class="icon">
+              <img src="/images/male_icon.svg">
+            </div>
           </div>
-          <div class="stats miles-away">
-            <p><?php echo $user['milesAway'] ?></p>
-            <h3>Miles Away</h3>
-          </div>
+          <button class="show-more">Show More</button>
         </div>
-        <div class="person-icons">
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-          <div class="icon">
-            <img src="/images/male_icon.svg">
-          </div>
-        </div>
-<<<<<<< HEAD
       </div>
-
-      <button class="show-more">Show More</button>
 
       <div class="more-info">
         <address>
@@ -80,19 +79,15 @@
         </section>
           <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day. </p>
         <section class="description">
-
       </div>
+      <button class="show-more">Show More</button>
 
-=======
-        <button class="show-more">Show More</button>
->>>>>>> 32958e436e3d3de89054fd71a7cdb05b4d8dcb6d
-      </div>
-    <?php } ?> 
+    <?php } ?>
     <!-- END FOR EACH -->
 
     <footer>
         rfdsfdNjlsanfjdslnfjlz
-      </footer>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
   </body>
