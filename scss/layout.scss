@@ -2,7 +2,7 @@ body {
 	margin: 0px;
 }
 header {
-	height: 114px;
+	height: 120px;
 	width: 100%;
 	background-color: $base-color;
 	h1 {
@@ -16,6 +16,9 @@ header {
 	}
 	p {
 		text-align: center;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
 		color: $neutral-3;
 
 		@media (min-width: $break-desktop) {
@@ -23,6 +26,7 @@ header {
 		}
 	}
 	.title {
+		padding-top: 10px;
 		@media (min-width: $break-desktop) {
 			float: left;
 			width: 50%;
@@ -32,6 +36,9 @@ header {
 	}
 
 	.your-location {
+
+
+
 		@media (min-width: $break-desktop) {
 			float: right;
 			padding-right: 30px;

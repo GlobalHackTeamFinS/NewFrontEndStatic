@@ -1,0 +1,20 @@
+button.show-more {
+  width: 80px;
+  background-color: #46bfff;
+  text-align: center;
+  color: #fff;
+  font-family: 'Lato';
+  font-size: 14px;
+  display: block;
+  margin: 0px auto;
+  border:none;
+
+  }
+
+  button:hover {
+    background-color: $base-color;
+  }
+
+  button:focus {
+    
+  }
