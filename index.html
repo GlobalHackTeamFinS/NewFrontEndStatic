@@ -120,15 +120,31 @@
               </section>
               <section>
               <div class="person-icon-container">
-                <div class="icon">
-                  <img src="/images/male_icon.svg">
-                </div>
-                <div class="icon">
-                  <img src="/images/male_icon.svg">
-                </div>
-                <div class="icon">
-                  <img src="/images/male_icon.svg">
-                </div>
+                <?php if ($user['acceptedClients']['men'] === true) { ?>
+                  <div class="icon">
+                    <img src="/images/male_icon.svg">
+                  </div>
+                <?php } ?>
+                <?php if ($user['acceptedClients']['women'] === true) { ?>
+                  <div class="icon">
+                    <img src="/images/male_icon.svg">
+                  </div>
+                <?php } ?>
+                <?php if ($user['acceptedClients']['children'] === true) { ?>
+                  <div class="icon">
+                    <img src="/images/male_icon.svg">
+                  </div>
+                <?php } ?>
+                <?php if ($user['acceptedClients']['veteran'] === true) { ?>
+                  <div class="icon">
+                    <img src="/images/male_icon.svg">
+                  </div>
+                <?php } ?>
+                <?php if ($user['acceptedClients']['handicap'] === true) { ?>
+                  <div class="icon">
+                    <img src="/images/male_icon.svg">
+                  </div>
+                <?php } ?>
               </div>
               <div class="button-container">
                 <button class="shelter-toggle">SHOW MORE</button>
