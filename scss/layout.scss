@@ -19,6 +19,9 @@ header {
 			padding-top: 30px;
 			padding-left: 30px;
 		}
+		@media (min-width: 768px) {
+			font-size: $xl;
+		}
 	}
 	p {
 		text-align: center;
@@ -41,7 +44,6 @@ header {
 		@media (min-width: $break-desktop) {
 			float: right;
 			padding-top: 20px;
-			padding-right: 30px;
 			p.change {
 				margin-top: 12px;
 				font-weight: $bold;
