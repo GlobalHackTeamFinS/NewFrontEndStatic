@@ -23,6 +23,26 @@
       </div>
     </header>
 
+    <!-- GET LONG AND LAT OF ACURRENT ADDRESS -->
+    <?php
+      // Get cURL resource
+      $curl = curl_init();
+      // Set some options - we are passing in a useragent too here
+      curl_setopt_array($curl, array(
+          CURLOPT_RETURNTRANSFER => 1,
+          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCF25VMhNe1GmYHpgzxiOFou8DLtMcsxPk',
+          CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+      ));
+      // Send the request & save response to $resp
+      $resp = curl_exec($curl);
+      // Close request to clear up some resources
+      curl_close($curl);
+
+      $respDecoded = json_decode($resp, true);
+      $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
+      $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
+    ?>
+
     <section class="main-container">
       <!-- PARSE JSON -->
       <?php
@@ -52,7 +72,36 @@
                   <h3>Doors Close</h3>
                 </div>
                 <div class="stats miles-away">
-                  <p><?php echo round($user['milesAway'], 1) ?></p>
+                  <p>
+                    <?php 
+
+                    $shelterLng = $user['gpsLocation']['longitude'];
+                    $shelterLat = $user['gpsLocation']['latitude'];
+
+                    // Get cURL resource
+                    $curl = curl_init();
+                    // Set some options - we are passing in a useragent too here
+                    curl_setopt_array($curl, array(
+                        CURLOPT_RETURNTRANSFER => 1,
+                        CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLat.'%'.$shelterLng.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
+                        CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+                    ));
+                    // Send the request & save response to $resp
+                    $resp = curl_exec($curl);
+                    // Close request to clear up some resources
+                    curl_close($curl);
+
+                    $respDecoded = json_decode($resp, true);
+                    $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
+                    
+                    if ($miles != NULL) {
+                      echo str_replace("mi","",$miles);
+                    } else {
+                      echo "N/A";
+                    }
+
+                    ?>
+                  </p>
                   <h3>Miles Away</h3>
                 </div>
               </section>
