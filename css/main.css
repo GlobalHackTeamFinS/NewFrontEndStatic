@@ -575,7 +575,7 @@ h1, h2, h3 {
   margin: 0; }
 
 h3 {
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px; }
 
@@ -593,29 +593,31 @@ header {
   background-color: #6C029F; }
   header h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
-    letter-spacing: 2px; }
-    @media (min-width: 600px) {
-      header h1 {
-        text-align: left; } }
-  header p {
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    color: #fff; }
-    @media (min-width: 600px) {
-      header p {
-        text-align: right; } }
-  header .title {
+    letter-spacing: 2px;
     padding-top: 10px; }
     @media (min-width: 600px) {
-      header .title {
+      header h1 {
+        text-align: left;
         float: left;
         width: 50%;
         padding-top: 30px;
         padding-left: 30px; } }
+  header p {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    color: #fff; }
+    @media (min-width: 600px) {
+      header p {
+        text-align: right; } }
+  header a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #46bfff;
+    font-size: 12px; }
   @media (min-width: 600px) {
     header .your-location {
       float: right;
@@ -667,7 +669,7 @@ button:hover {
   margin: 0px auto; }
   .shelter-list-component .title {
     margin: 30px auto;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
     color: #3b3b49;
     font-weight: 600; }
@@ -679,7 +681,7 @@ button:hover {
       width: 33.3%;
       text-align: center; }
       .shelter-list-component .stats-container .stats p {
-        font-size: 32px; }
+        font-size: 24px; }
   .shelter-list-component .person-icons {
     width: 100%;
     margin: 30px auto;

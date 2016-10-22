@@ -10,34 +10,33 @@ header {
 		font-size: $large;
 		color: $neutral-3;
 		letter-spacing: 2px;
-		@media (min-width: $break-desktop) {
-			text-align: left;
-		}
-	}
-	p {
-		text-align: center;
-		color: #fff;
-		font-size: 14px;
-		text-align: center;
-		color: $neutral-3;
-		@media (min-width: $break-desktop) {
-			text-align: right;
-		}
-	}
-	.title {
 		padding-top: 10px;
 		@media (min-width: $break-desktop) {
+			text-align: left;
 			float: left;
 			width: 50%;
 			padding-top: 30px;
 			padding-left: 30px;
 		}
 	}
+	p {
+		text-align: center;
+		color: $neutral-3;
+		font-size: $small-normal;
+		color: $neutral-3;
+		@media (min-width: $break-desktop) {
+			text-align: right;
+		}
+	}
+	a {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		color: $action-color;
+		font-size: $small-bold;
+	}
 
 	.your-location {
-
-
-
 		@media (min-width: $break-desktop) {
 			float: right;
 			padding-top: 20px;
@@ -53,7 +52,6 @@ header {
 				color: $base-color;
 				padding: 3px;
 				text-decoration: none;
-
 			}
 			a:hover {
 				background-color: $action-color;
