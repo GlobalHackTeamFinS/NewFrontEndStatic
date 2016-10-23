@@ -648,11 +648,13 @@ header {
     font-size: 12px; }
   header .title {
     width: 200px;
+    height: 70px;
     color: transparent;
-    text-indent: 100%;
+    text-indent: -100%;
     background-image: url("../images/oneRoofFull.svg");
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin: 0 auto; }
   header .your-location {
     margin-top: 10px; }
     @media (min-width: 600px) {
