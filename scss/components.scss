@@ -22,38 +22,46 @@
 			font-size: $xl;
 		}
 	}
-	section {
-		width: 100%;
-		display: table;
-		padding: 15px 15px 15px;
+	// .row {
+	// 	padding: 0 15px;
+	// }
+	.teaser{
+		max-width: 1200px;
+		margin: 0 auto;
+		section {
+			width: 100%;
+			display: table;
+			padding: 15px;
+			//margin-left: 15px;
 
-		@media (min-width: 600px){
-			width: 50%;
-    		//float: left;
-    		display: initial;
-    		padding: 0px 0px 20px;
-		}
-		.stats {
-			display: table-cell;
-			width: 33.3%;
-			text-align: center;
+			@media (min-width: 600px){
+				width: 50%;
+	    		//float: left;
+	    		display: initial;
+	    		//padding: 0px 0px 20px;
+			}
+			.stats {
+				display: table-cell;
+				width: 33.3%;
+				text-align: center;
 
-			@media (min-width: 600px) {
-				display: inline-block;
-			    text-align: center;
-			    margin-right: 9px;
-			    width: auto;
-			}
-			@media (min-width: 768px) {
-				display: inline-block;
-			    text-align: center;
-			    margin-right: 35px;
-			    width: auto;
-			}
-			p {
-				font-size: $large;
-				@media (min-width: 768px){
-					font-size: $xl;
+				@media (min-width: 600px) {
+					display: inline-block;
+				    text-align: center;
+				    margin-right: 9px;
+				    width: auto;
+				}
+				@media (min-width: 768px) {
+					display: inline-block;
+				    text-align: center;
+				    margin-right: 35px;
+				    width: auto;
+				}
+				p {
+					font-size: $large;
+					@media (min-width: 768px){
+						font-size: $xl;
+					}
 				}
 			}
 		}
@@ -102,10 +110,15 @@
 		display: none;
 		background-color: $neutral-2;
 		color: $neutral-1;
-		margin-top: 0px;
+		padding-left: 15px;
+		margin: 0;
 		clear: both;
 		width: 100%;
-
+		
+		section {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
 		address {
 			margin: 0px auto;
 			font-style: normal;
@@ -113,7 +126,7 @@
 				color: $action-color;
 				text-decoration: none;
 				@media (min-width: 600px) {
-					padding: 15px 0px 15px;
+					padding: 15px 0 0;
 					float: left;
 
 					address {
@@ -131,12 +144,28 @@
 
 .your-location {
 	label {
-    	color: #46bfff;
+    	color: #fff;
     	text-align: center;
 	    width: 100%;
 	    display: block;
-	    font-family: 'Lato', sans-serif;
-	    font-weight: 300;
+    }
+    .change-toggle {
+    	text-align: center;
+		color: #fff;
+		margin-top: 8px;
+
+		@media (min-width: 600px) {
+			text-align: right;
+		}
+    }
+    .change-location {
+    	top: 153px;
+    	@media (min-width: 600px) {
+			top: 75px;
+		}
+		@media (min-width: 768px) {
+			top: 76px;
+		}
     }
 }
 
@@ -145,6 +174,9 @@
 }
 
 .input-toggle:checked ~ .input-location {
+	display: block;
+}
+#change-toggle:checked ~ .input-location {
 	display: block;
 }
 .input-location {
@@ -156,19 +188,19 @@
     position: absolute;
     background-color: #e2e2e2;
     padding: 15px;
-    top: 67px;
+    top: 107px;
     z-index: 1;
 
     @media (min-width: 600px){
     	width: 320px;
-	    top: 38px;
+	    top: 75px;
 		z-index: 1;
 		right: 10px;
 
     }
     @media (min-width: 768px){
     	width: 320px;
-	    top: 49px;
+	    top: 75px;
 		z-index: 1;
 		right: 10px;
 
@@ -179,22 +211,19 @@
 	    border: none;
 	    padding: 5px;
 	    border-radius: 2px;
-	    font-size: 14px;
-	    font-family: 'Lato', sans-serif;
-	    font-weight: 700;
+	    font-size: $small-bold;
+	    font-weight: $bold;
     }
 
     button {
-    	background-color: #46bfff;
+    	background-color: $action-color;
+    	font-weight: $bold;
 	    border: none;
 	    border-radius: 2px;
 	    color: #fff;
-	    font-family: 'Lato', sans-serif;
-	    font-weight: 300;
 	    width: 100%;
-
+	    letter-spacing: 1px;
     }
-
 }
 
 .hotline {

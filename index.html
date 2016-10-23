@@ -42,14 +42,22 @@
                 $state = $_GET["state"];
                 echo '<p>'.$street.'</p>';
                 echo '<p>'.$city.', '.$state.'</p>';
-               }
+                // echo '<input type="checkbox" class="input-toggle" id="change-toggle"><label class="change-toggle" for="change-toggle">Change Address</label>';
+                echo '<input type="checkbox" class="input-toggle" id="toggle"><label class="change-toggle" for="toggle">Change Address</label>
+                      <form class="form-inline input-location change-location" action="index.html">
+                        <input type="text" name="street" placeholder="Street Address">
+                        <input type="text" name="city" placeholder="City">
+                        <input type="text"  name="state" placeholder="State">
+                        <button type="submit">SAVE</button>
+                      </form>';
+               } 
                else {
                 echo '<input type="checkbox" class="input-toggle" id="toggle"><label for="toggle">Please Enter An Address</label>
                       <form class="form-inline input-location" action="index.html">
                         <input type="text" name="street" placeholder="Street Address">
                         <input type="text" name="city" placeholder="City">
                         <input type="text"  name="state" placeholder="State">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit">SAVE</button>
                       </form>';
               }
             ?>
@@ -105,7 +113,7 @@
         <div class="list-border">
           <div class="shelter-list-component">
             <div class="container">
-              <div class="row">
+              <div class="teaser row">
                 <h1 class="title"><?php echo $user['name'] ?></h1>
                   <section>
                     <div class="stats open-beds">
@@ -126,76 +134,57 @@
                       <p>
                         <?php
 
-                        $shelterLng = $user['gpsLocation']['longitude'];
-                        $shelterLat = $user['gpsLocation']['latitude'];
+                      $shelterLat = $user['gpsLocation']['latitude'];
+                      $shelterLng = '-'.$user['gpsLocation']['longitude'];
+                      $milesInt = distance($lat, $lng, $shelterLat, $shelterLng, "M");
+                      
+                      if ($milesInt < 50) {
+                        echo number_format((float)$milesInt, 2, '.', '');
+                      } else {
+                        echo "n/a";
+                      }
 
-
-                        // Get cURL resource
-                        $curl = curl_init();
-                        // Set some options - we are passing in a useragent too here
-                        curl_setopt_array($curl, array(
-                            CURLOPT_RETURNTRANSFER => 1,
-                            CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLng.'%'.$shelterLat.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
-                            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-                        ));
-                        // Send the request & save response to $resp
-                        $resp = curl_exec($curl);
-                        // Close request to clear up some resources
-                        curl_close($curl);
-
-                        $respDecoded = json_decode($resp, true);
-                        $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
-
-                        if ($miles != NULL) {
-                          echo str_replace("mi","",$miles);
-                        } else {
-                          echo "N/A";
-                        }
-
-                        ?>
-                      </p>
-                      <h3>Miles Away</h3>
-                    </div>
-                  </section>
-                  <section>
-                    <div class="person-icon-container">
-                      <?php if ($user['acceptedClients']['men'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/male_icon.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['women'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/female_icon.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['children'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/family.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['veteran'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/veterans.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['handicap'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/accessible.svg">
-                        </div>
-                      <?php } ?>
-                    </div>
-                    <div class="button-container">
-                      <button class="shelter-toggle">SHOW MORE</button>
-                    </div>
-                    </section>
+                      ?>
+                    </p>
+                    <h3>Miles Away</h3>
+                  </div>
+                </section>
+                <section>
+                  <div class="person-icon-container">
+                    <?php if ($user['acceptedClients']['men'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/male_icon.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['women'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/female_icon.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['children'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/family.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['veteran'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/veterans.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['handicap'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/accessible.svg">
+                      </div>
+                    <?php } ?>
+                  </div>
+                  <div class="button-container">
+                    <button class="shelter-toggle">SHOW MORE</button>
+                  </div>
+                </section>
               </div>
-            </div>
-
-            <!-- MORE INFO SECTION -->
-            <section class="more-info">
-              <div class="container">
-                <div class="row">
+                <!-- MORE INFO SECTION -->
+              <div class="full row more-info clearfix">
+                <section class="clearfix">
                   <address>
                     <p class="phone"><?php echo $user['phone'] ?></p>
                     <ul class="address">

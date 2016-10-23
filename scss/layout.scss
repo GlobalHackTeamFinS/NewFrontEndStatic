@@ -8,6 +8,10 @@ header {
 	background-color: $base-color;
 	padding: 15px 0;
 
+	.container{
+		max-width: 1200px;
+	}
+
 	@media (min-width: 600px){
 		float: left;
 	    margin-bottom: 25px;
@@ -45,7 +49,16 @@ header {
 		color: $action-color;
 		font-size: $small-bold;
 	}
-
+	.title {
+		width: 200px;
+		height: 70px;
+		color: transparent;
+		text-indent: -100%;
+		background-image: url("../images/oneRoofFull.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+	}
 	.your-location {
 		margin-top: 10px;
 		@media (min-width: 600px) {
@@ -77,18 +90,6 @@ header {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
-	// @media (min-width: 600px) {
-	// 	max-width: 600px;
-	// }
-	// @media (min-width: 768px) {
-	// 	max-width: 768px;
-	// }
-	// @media (min-width: 992px) {
-	// 	max-width: 992px;
-	// }
-	// @media (min-width: 1200px) {
-	// 	max-width: 1200px;
-	// }
 }
 .row {
 	// @media (min-width: 600px) {
