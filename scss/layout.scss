@@ -38,9 +38,8 @@ header {
 	}
 	p {
 		text-align: center;
-		color: $neutral-3;
 		font-size: $small-normal;
-		color: $neutral-3;
+		color: $neutral-1;
 		@media (min-width: $break-desktop) {
 			text-align: right;
 		}

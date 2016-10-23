@@ -11,21 +11,29 @@ $(document).ready(function () {
   	}
   });
 
-  $(document('.minutes')
+  window.setInterval( function () {
+  	$('span.minutes').each( function() {
+  	
+  		if( $(this).text() == 0 ) {
+  			if( $(this).siblings('span.hours').length == 0 ) {
+  				console.log(1);
+  				$(this).prev('.unit-hr').remove();
+  				$(this).next('.unit-min').remove();
+  				$(this).parent().prepend('<span class="closed">Closed</span>');
+  				$(this).remove();
+  			} else if( $(this).siblings('.hours').text() == 1 ) {
+  				console.log(2);
+  				$(this).siblings('.hours').remove();
+  				$(this).prev('.unit-hr').remove();
+  				$(this).text(59);
+  			} else {
+  				console.log(3);
+  				$(this).siblings('.hours').text( $(this).siblings('.hours').text() - 1 );
+  				$(this).text(59);
+  			}
+  		} else {
+  			$(this).text( $(this).text() - 1 );
+  		}
+  	});
+  }, 60000);
 });
-
-//console.log($(window).scrollTop());
-
-// if (1 === 1) {
-
-
-//   function toTop(callback) {
-//     $("html, body").animate({ scrollTop: $(document).height() }, 10000);
-//     toTop(function (){
-//       if (scrollTop === $(document).height()) {
-//         $("html, body").animate({ scrollTop: 0 }, 10000);
-//       };
-//     });
-//   }
-  
-// }

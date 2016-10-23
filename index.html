@@ -182,13 +182,28 @@
                 </div>
                 <div class="stats doors-close">
                   <p>
-                    <span class="minutes">
+                    
                     <?php
-                      $to_time = strtotime("2008-12-13 10:42:00");
-                      $from_time = strtotime("2008-12-13 10:21:00");
-                      echo round(abs($to_time - $from_time) / 60,2);
+                      date_default_timezone_set('America/Chicago');
+                      $hour = date("H");
+                      $minutes = date('i');
+                      $currentTime = ($hour * 60) + $minutes;
+                      $timeRemaining = $user['obj']['intakeEnd'] - $currentTime;
+                      if($timeRemaining <= 0) {
+                        echo '<span class="closed">Closed</span>';
+                      } else {
+                        $hourRemaining = floor($timeRemaining / 60);
+                        $minsRemaining = $timeRemaining % 60;
+                        if ($hourRemaining >= 1) {
+                          echo '<span class="hours">' . $hourRemaining . '</span><span class="unit-hr"> hr</span> <span class="minutes">' . $minsRemaining . '</span><span class="unit-min"> min </span>';
+                        } else {
+                          echo '<span class="minutes">' . $minsRemaining . ' </span>min';
+                        }
+                      }
+                      //$to_time = strtotime("2008-12-13 10:42:00");
+                      //$from_time = strtotime("2008-12-13 10:21:00");
+                      //echo round(abs($to_time - $from_time) / 60,2);
                     ?>
-                    </span> min
                   </p>
                   <h3>Doors Close</h3>
                 </div>
@@ -207,7 +222,7 @@
                       // } else {
                       // echo "n/a";
                       // }
-                      echo $user['dis'];
+                      echo round($user['dis'], 1);
                     ?>
                   </p>
                   <h3>Miles Away</h3>

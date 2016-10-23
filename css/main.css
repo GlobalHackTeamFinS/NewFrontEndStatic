@@ -646,9 +646,8 @@ header {
         font-size: 32px; } }
   header p {
     text-align: center;
-    color: #fff;
     font-size: 14px;
-    color: #fff; }
+    color: #3b3b49; }
     @media (min-width: 600px) {
       header p {
         text-align: right; } }
@@ -855,7 +854,7 @@ button.shelter-toggle {
             float: left; } }
 
 .your-location label {
-  color: #fff;
+  color: #3b3b49;
   text-align: center;
   width: 100%;
   display: block; }
@@ -864,7 +863,7 @@ button.shelter-toggle {
       text-align: right; } }
 .your-location .change-toggle {
   text-align: center;
-  color: #fff;
+  color: neutral-1;
   margin-top: 8px; }
   @media (min-width: 600px) {
     .your-location .change-toggle {
