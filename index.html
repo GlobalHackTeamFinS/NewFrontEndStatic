@@ -42,6 +42,14 @@
                 $state = $_GET["state"];
                 echo '<p>'.$street.'</p>';
                 echo '<p>'.$city.', '.$state.'</p>';
+                // echo '<input type="checkbox" class="input-toggle" id="change-toggle"><label class="change-toggle" for="change-toggle">Change Address</label>';
+                echo '<input type="checkbox" class="input-toggle" id="toggle"><label class="change-toggle" for="toggle">Change Address</label>
+                      <form class="form-inline input-location change-location" action="index.html">
+                        <input type="text" name="street" placeholder="Street Address">
+                        <input type="text" name="city" placeholder="City">
+                        <input type="text"  name="state" placeholder="State">
+                        <button type="submit">SAVE</button>
+                      </form>';
                } 
                else {
                 echo '<input type="checkbox" class="input-toggle" id="toggle"><label for="toggle">Please Enter An Address</label>
@@ -148,7 +156,7 @@
                       if ($milesInt < 50) {
                         echo number_format((float)$milesInt, 2, '.', '');
                       } else {
-                        echo "";
+                        echo "n/a";
                       }
 
                       ?>

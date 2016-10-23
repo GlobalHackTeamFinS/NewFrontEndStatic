@@ -820,11 +820,29 @@ button.shelter-toggle {
   text-align: center;
   width: 100%;
   display: block; }
+.your-location .change-toggle {
+  text-align: center;
+  color: #fff;
+  margin-top: 8px; }
+  @media (min-width: 600px) {
+    .your-location .change-toggle {
+      text-align: right; } }
+.your-location .change-location {
+  top: 116px; }
+  @media (min-width: 600px) {
+    .your-location .change-location {
+      top: 73px; } }
+  @media (min-width: 768px) {
+    .your-location .change-location {
+      top: 76px; } }
 
 .input-toggle {
   display: none; }
 
 .input-toggle:checked ~ .input-location {
+  display: block; }
+
+#change-toggle:checked ~ .input-location {
   display: block; }
 
 .input-location {

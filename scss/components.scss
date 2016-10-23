@@ -148,6 +148,24 @@
 	    width: 100%;
 	    display: block;
     }
+    .change-toggle {
+    	text-align: center;
+		color: #fff;
+		margin-top: 8px;
+
+		@media (min-width: 600px) {
+			text-align: right;
+		}
+    }
+    .change-location {
+    	top: 116px;
+    	@media (min-width: 600px) {
+			top: 73px;
+		}
+		@media (min-width: 768px) {
+			top: 76px;
+		}
+    }
 }
 
 .input-toggle {
@@ -155,6 +173,9 @@
 }
 
 .input-toggle:checked ~ .input-location {
+	display: block;
+}
+#change-toggle:checked ~ .input-location {
 	display: block;
 }
 .input-location {
@@ -202,7 +223,6 @@
 	    width: 100%;
 	    letter-spacing: 1px;
     }
-
 }
 
 
