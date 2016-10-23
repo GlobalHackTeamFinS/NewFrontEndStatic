@@ -13,7 +13,7 @@
     <header>
       <div class="container">
         <div class="row">
-          <h1 class="title">ONE ROOF</h1>
+          <h1 class="title"><a href="index.html">ONE ROOF</a></h1>
           <div class="your-location">
             <?php 
 
@@ -210,8 +210,18 @@
                       ?>
                       <li><?php echo $user['address']['city'] . ', ' . $user['address']['state'] . ' ' .  $user['address']['zip'] ?></li>
                     </ul>
-                    <a href="directions">Get Directions</a>
+                    <?php 
+                      $street = str_replace(" ","+",$user['address']['line1']);
+                      $city = str_replace(" ","+",$user['address']['city']);
+                      $state = str_replace(" ","+",$user['address']['state']);
+                      $zip = str_replace(" ","+",$user['address']['zip']);
+                      echo '<a class="get-directions-link" href="https://www.google.com/maps/search/'.$street.'+'.$city.',+'.$state.'+'.$zip.'">Get Directions</a>'
+                    ?>
+                    
                   </address>
+                  <div class="shelter-description">
+                    <p><?php echo $user['description'] ?></p>
+                  </div>
                 </section>
               </div>
             </div>

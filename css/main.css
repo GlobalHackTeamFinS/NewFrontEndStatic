@@ -589,7 +589,8 @@ p {
 
 .phone {
   color: #32d5f2;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-top: 10px; }
 
 .address {
   list-style-type: none;
@@ -599,15 +600,23 @@ p {
     font-weight: 300; }
 
 .shelter-description {
-  margin-top: 15px; }
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  @media (min-width: 600px) {
+    .shelter-description {
+      width: 50%; } }
 
 .hotline {
   color: #46bfff;
   font-weight: 700; }
 
+@media (min-width: 600px) {
+  .get-directions-link {
+    margin-bottom: 10px; } }
+
 body {
   margin: 0px;
-  padding-bottom: 80px; }
+  padding-bottom: 78px; }
 
 header {
   width: 100%;
@@ -683,6 +692,9 @@ header {
   width: 100%;
   margin: 0 auto; }
 
+.row {
+  padding: 0 15px; }
+
 footer {
   position: fixed;
   right: 0;
@@ -720,13 +732,15 @@ button.shelter-toggle {
     font-size: 24px;
     text-align: center;
     color: #3b3b49;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-top: 15px; }
     @media (min-width: 600px) {
       .shelter-list-component .title {
-        text-align: left; } }
+        text-align: left;
+        margin-bottom: 15px; } }
     @media (min-width: 768px) {
       .shelter-list-component .title {
-        margin: 30px auto;
+        margin: 15px auto;
         font-size: 32px; } }
   .shelter-list-component .teaser {
     max-width: 1200px;
@@ -734,7 +748,7 @@ button.shelter-toggle {
     .shelter-list-component .teaser section {
       width: 100%;
       display: table;
-      padding: 15px; }
+      padding: 15px 0; }
       @media (min-width: 600px) {
         .shelter-list-component .teaser section {
           width: 50%;
@@ -804,24 +818,25 @@ button.shelter-toggle {
       margin: 0 auto; }
     .shelter-list-component .more-info address {
       margin: 0px auto; }
+      @media (min-width: 600px) {
+        .shelter-list-component .more-info address {
+          float: right; } }
       .shelter-list-component .more-info address a {
         color: #fdc351;
         text-decoration: none; }
         @media (min-width: 600px) {
           .shelter-list-component .more-info address a {
             padding: 15px 0 0;
-            float: left; }
-            .shelter-list-component .more-info address a address {
-              float: right; }
-            .shelter-list-component .more-info address a .shelter-description {
-              margin-top: 0px;
-              width: 50%; } }
+            float: left; } }
 
 .your-location label {
   color: #fff;
   text-align: center;
   width: 100%;
   display: block; }
+  @media (min-width: 600px) {
+    .your-location label {
+      text-align: right; } }
 .your-location .change-toggle {
   text-align: center;
   color: #fff;
@@ -857,6 +872,9 @@ button.shelter-toggle {
   padding: 15px;
   top: 107px;
   z-index: 1; }
+  @media (max-width: 599px) {
+    .input-location {
+      left: 0px; } }
   @media (min-width: 600px) {
     .input-location {
       width: 320px;
