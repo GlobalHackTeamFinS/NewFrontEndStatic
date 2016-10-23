@@ -749,7 +749,7 @@ button.shelter-toggle {
         text-align: center;
         float: right; } }
     .shelter-list-component .person-icon-container .icon {
-      width: 25%;
+      width: 20%;
       display: inline-block;
       float: left; }
       @media (min-width: 600px) {
@@ -771,16 +771,14 @@ button.shelter-toggle {
       .shelter-list-component .button-container {
         display: block; } }
   .shelter-list-component .more-info {
-    display: none; }
-  .shelter-list-component.open .more-info {
-    display: block;
+    display: none;
     background-color: #ececec;
     color: #3b3b49;
     margin-top: 0px;
     clear: both;
     width: 100%; }
-    .shelter-list-component.open .more-info address {
+    .shelter-list-component .more-info address {
       margin: 0px auto; }
-      .shelter-list-component.open .more-info address a {
+      .shelter-list-component .more-info address a {
         color: #46bfff;
         text-decoration: none; }
