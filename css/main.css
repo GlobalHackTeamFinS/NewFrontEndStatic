@@ -663,7 +663,8 @@ header {
     background-image: url("../images/oneRoofFull.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 0 auto; }
+    margin: 0 auto;
+    overflow: hidden; }
   header .your-location {
     margin-top: 10px; }
     @media (min-width: 600px) {
@@ -723,11 +724,9 @@ button.shelter-toggle {
       margin-bottom: 25px;
       font-size: 16px; } }
 
-.list-border {
-  border-bottom: 1px solid #ececec; }
-
 .shelter-list-component {
-  margin: 0px auto; }
+  margin: 0px auto;
+  border-bottom: 1px solid #ececec; }
   @media (min-width: 600px) {
     .shelter-list-component {
       clear: both; } }

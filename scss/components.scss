@@ -1,9 +1,6 @@
-.list-border {
-	border-bottom: 1px solid $neutral-2;
-}
 .shelter-list-component {
 	margin: 0px auto;
-
+	border-bottom: 1px solid $neutral-2;
 	@media (min-width: 600px) {
 		clear: both;
 	}

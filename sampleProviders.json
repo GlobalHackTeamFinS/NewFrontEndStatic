@@ -1,15 +1,15 @@
 [
   {
     "id": "56bafde0-d2bd-44b5-8f09-8a30d1647eaa",
-    "name": "VIOCULAR",
-    "email": "lucyrasmussen@viocular.com",
-    "phone": "+1 (923) 590-3646",
+    "name": "Gateway 180",
+    "email": "sgarrett@gatewayhomelss.org",
+    "phone": "+1 (314) 231-1515",
     "address": {
-      "line1": "299 Glendale Court",
+      "line1": "1000 N. 19th Street",
       "line2": null,
-      "city": "Lindcove",
-      "state": "Idaho",
-      "zip": 91847
+      "city": "St. Louis",
+      "state": "MIssouri",
+      "zip": 63106
     },
     "registered": "2014-03-20T05:57:13 +05:00",
     "gpsLocation": {
@@ -19,28 +19,28 @@
     "milesAway": 7.8529,
     "acceptedClients": {
       "men": false,
-      "women": false,
-      "children": false,
+      "women": true,
+      "children": true,
       "veteran": true,
       "handicap": true
     },
-    "totalBeds": 47,
+    "totalBeds": 174,
     "occupiedBeds": 27,
-    "intakeStart": 1204,
-    "intakeEnd": 1324,
+    "intakeStart": 510,
+    "intakeEnd": 1140,
     "description": "Culpa eu fugiat duis aliquip dolore aliqua commodo eiusmod laboris sunt nostrud labore. Aliqua aliqua deserunt laboris ipsum nostrud ullamco dolore est voluptate dolor cillum est eiusmod consectetur. Fugiat anim excepteur non mollit eu nisi velit ex.\r\n"
   },
   {
     "id": "c6ae669a-9496-42cd-8f94-5cfdefc2b21e",
-    "name": "ZILLADYNE",
-    "email": "lucyrasmussen@zilladyne.com",
-    "phone": "+1 (838) 436-3969",
+    "name": "Our Lady's Inn",
+    "email": "mlaubengayer@ourladysinn.org",
+    "phone": "+1 (314) 351-4590",
     "address": {
-      "line1": "903 Waldane Court",
+      "line1": "4223 S. Compton",
       "line2": null,
-      "city": "Sehili",
-      "state": "Utah",
-      "zip": 99225
+      "city": "St. Louis",
+      "state": "Missouri",
+      "zip": 63110
     },
     "registered": "2015-07-05T10:54:33 +05:00",
     "gpsLocation": {
@@ -51,19 +51,19 @@
     "acceptedClients": {
       "men": false,
       "women": true,
-      "children": false,
+      "children": true,
       "veteran": true,
       "handicap": false
     },
-    "totalBeds": 88,
-    "occupiedBeds": 72,
+    "totalBeds": 18,
+    "occupiedBeds": 6,
     "intakeStart": 1301,
     "intakeEnd": 1421,
     "description": "Sunt eiusmod do ad dolor eu ut adipisicing aliquip. Ipsum esse eiusmod ea pariatur elit incididunt enim est sint. Dolore voluptate duis cillum dolor sint laboris sit velit ad magna. Excepteur consectetur aute laborum laboris cupidatat laborum amet veniam eiusmod. Fugiat proident dolore dolore nisi esse. Elit ad duis Lorem in consectetur veniam consequat minim mollit.\r\n"
   },
   {
     "id": "f59837fe-7da5-4403-8bc2-f861049993fa",
-    "name": "OHMNET",
+    "name": "St. Peter & Paul Shelter",
     "email": "lucyrasmussen@ohmnet.com",
     "phone": "+1 (934) 485-2022",
     "address": {
