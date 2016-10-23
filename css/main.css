@@ -809,16 +809,6 @@ button.shelter-toggle {
       .shelter-list-component .more-info address a {
         color: #46bfff;
         text-decoration: none; }
-<<<<<<< HEAD
-
-.input-location {
-  width: 100%;
-  padding: 0 15px;
-  max-width: 320px; }
-  .input-location input {
-    width: 100%;
-    margin-bottom: 5px; }
-=======
         @media (min-width: 600px) {
           .shelter-list-component .more-info address a {
             padding: 15px 0px 15px;
@@ -828,4 +818,11 @@ button.shelter-toggle {
             .shelter-list-component .more-info address a .shelter-description {
               margin-top: 0px;
               width: 50%; } }
->>>>>>> 459fbd0d634c3b7b7ca02a7044b52e932ecefaec
+
+.input-location {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 320px; }
+  .input-location input {
+    width: 100%;
+    margin-bottom: 5px; }
