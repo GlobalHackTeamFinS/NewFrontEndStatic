@@ -8,6 +8,10 @@ header {
 	background-color: $base-color;
 	padding: 15px 0;
 
+	.container{
+		max-width: 1200px;
+	}
+
 	@media (min-width: 600px){
 		float: left;
 	    margin-bottom: 25px;

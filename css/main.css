@@ -613,6 +613,8 @@ header {
   width: 100%;
   background-color: #32d5f2;
   padding: 15px 0; }
+  header .container {
+    max-width: 1200px; }
   @media (min-width: 600px) {
     header {
       float: left;
@@ -722,7 +724,8 @@ button.shelter-toggle {
     margin: 0 auto; }
     .shelter-list-component .teaser section {
       width: 100%;
-      display: table; }
+      display: table;
+      padding: 15px; }
       @media (min-width: 600px) {
         .shelter-list-component .teaser section {
           width: 50%;
