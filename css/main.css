@@ -893,7 +893,8 @@ button.shelter-toggle {
 .hotline h3 {
   color: #3b3b49; }
 .hotline h2 {
-  margin-top: 10px; }
+  margin-top: 10px;
+  color: #32d5f2; }
 @media (min-width: 600px) {
   .hotline {
     font-weight: 700;
