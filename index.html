@@ -41,7 +41,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-      
+
     ?>
 
     <section class="main-container">
@@ -50,8 +50,8 @@
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
         // usort(
-        //   $json_a, 
-        //   function($a, $b) { 
+        //   $json_a,
+        //   function($a, $b) {
         //     if ($a['milesAway'] == $b['milesAway']) {
         //       return 0;
         //     }
@@ -63,7 +63,7 @@
       ?>
 
       <!-- START FOR EACH -->
-      
+
       <?php foreach ($json_a as $users => $user) { ?>
         <div class="list-border">
           <div class="shelter-list-component">
@@ -175,13 +175,36 @@
                     <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
                   </div>
                 </div>
+                <div class="button-container">
+                  <button class="shelter-toggle">SHOW MORE</button>
+                </div>
+                </section>
+                <section class="more-info">
+                  <div class="container">
+                    <div class="row">
+                      <address>
+                      <a href="tel:<?php echo $user['phone'] ?>"><?php echo $user['phone'] ?></a>
+                      <ul class="address">
+                        <li><?php echo $user['address']['line1'] ?></li>
+                        <?php
+                          $line2 = $user['address']['line2'] ? '<li>' . $user['address']['line2'] . '</li>' : null;
+                          echo $line2;
+                        ?>
+                        <li><?php echo $user['address']['city'] . ', ' . $user['address']['state'] . ' ' .  $user['address']['zip'] ?></li>
+                      </ul>
+                      <a href="directions">Get Directions</a>
+                      <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
+                    </address>
+                    </div>
+                  </div>
+                </section>
               </div>
             </section>
           </div>
         </div>
       <?php } ?>
       <!-- END FOR EACH -->
-        
+
     </section>
 
     <footer>
