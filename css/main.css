@@ -614,6 +614,9 @@ p {
   .get-directions-link {
     margin-bottom: 10px; } }
 
+.change-toggle {
+  color: #fff; }
+
 body {
   margin: 0px;
   padding-bottom: 78px; }
@@ -669,6 +672,9 @@ header {
     overflow: hidden; }
   header .your-location {
     margin-top: 10px; }
+    @media (max-width: 599px) {
+      header .your-location {
+        margin-bottom: 15px; } }
     @media (min-width: 600px) {
       header .your-location {
         margin-top: 0px; } }
@@ -973,6 +979,35 @@ button.shelter-toggle {
     .key-icon {
       width: 19%; } }
 
+.change-form-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative; }
+  .change-form-wrapper .change-toggle {
+    position: relative;
+    top: -31px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: -25px; }
+    @media (min-width: 600px) {
+      .change-form-wrapper .change-toggle {
+        position: absolute;
+        right: 15px;
+        top: 63px; } }
+    @media (min-width: 1215px) {
+      .change-form-wrapper .change-toggle {
+        right: 0px; } }
+  .change-form-wrapper .input-location {
+    top: -10px; }
+    @media (min-width: 600px) {
+      .change-form-wrapper .input-location {
+        right: 15px;
+        top: 100px; } }
+    @media (min-width: 1215px) {
+      .change-form-wrapper .input-location {
+        right: 0px; } }
+
 .landing-bg {
   background-image: url("/images/St_Louis_night_expblend.jpg");
   background-color: #000;
@@ -987,7 +1022,7 @@ button.shelter-toggle {
   .landing-bg img {
     width: 80%;
     display: block;
-    margin: 30px auto 0 auto; }
+    margin: 20px auto 0 auto; }
     @media (min-width: 600px) {
       .landing-bg img {
         max-width: 600px;
@@ -998,8 +1033,12 @@ button.shelter-toggle {
     margin: 0;
     color: #fff;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    @media (min-width: 600px) {
+      .landing-bg h1 {
+        margin-top: 30px;
+        margin-bottom: 30px; } }
   .landing-bg .landing-form {
     padding: 0 15px;
     max-width: 320px;

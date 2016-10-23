@@ -280,6 +280,41 @@
 		width: 19%;
 	}
 }
+.change-form-wrapper {
+	max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+
+    .change-toggle {
+    	position: relative;
+	    top: -31px;
+	    text-align: center;
+	    margin: 0 auto;
+	    display: block;
+        margin-bottom: -25px;
+
+        @media (min-width: 600px) {
+        	position: absolute;
+		    right: 15px;
+		    top: 63px;
+        }
+        @media (min-width: 1215px) {
+        	right: 0px;
+        }
+    }
+
+    .input-location {
+    	top: -10px;
+    	@media (min-width: 600px) {
+    		right: 15px;
+    		top: 100px;
+    	}
+    	@media (min-width: 1215px) {
+        	right: 0px;
+        }
+    }
+
+}
 
 // .key {
 // 	margin: 10px 10px;
