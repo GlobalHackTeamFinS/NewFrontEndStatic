@@ -614,6 +614,9 @@ p {
   .get-directions-link {
     margin-bottom: 10px; } }
 
+.change-toggle {
+  color: #fff; }
+
 body {
   margin: 0px;
   padding-bottom: 78px; }
@@ -670,6 +673,9 @@ header {
     overflow: hidden; }
   header .your-location {
     margin-top: 10px; }
+    @media (max-width: 599px) {
+      header .your-location {
+        margin-bottom: 15px; } }
     @media (min-width: 600px) {
       header .your-location {
         margin-top: 0px; } }
@@ -973,6 +979,35 @@ button.shelter-toggle {
   @media (min-width: 768px) {
     .key-icon {
       width: 19%; } }
+
+.change-form-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative; }
+  .change-form-wrapper .change-toggle {
+    position: relative;
+    top: -31px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: -25px; }
+    @media (min-width: 600px) {
+      .change-form-wrapper .change-toggle {
+        position: absolute;
+        right: 15px;
+        top: 63px; } }
+    @media (min-width: 1215px) {
+      .change-form-wrapper .change-toggle {
+        right: 0px; } }
+  .change-form-wrapper .input-location {
+    top: -10px; }
+    @media (min-width: 600px) {
+      .change-form-wrapper .input-location {
+        right: 15px;
+        top: 100px; } }
+    @media (min-width: 1215px) {
+      .change-form-wrapper .input-location {
+        right: 0px; } }
 
 .landing-bg {
   background-image: url("/images/St_Louis_night_expblend.jpg");

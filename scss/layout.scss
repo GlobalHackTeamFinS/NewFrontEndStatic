@@ -67,6 +67,9 @@ header {
 	}
 	.your-location {
 		margin-top: 10px;
+		@media (max-width: 599px) {
+			margin-bottom: 15px;
+		}
 		@media (min-width: 600px) {
 			margin-top: 0px;
 		}
