@@ -44,7 +44,7 @@
                 echo '<p>'.$city.', '.$state.'</p>';
                } 
                else {
-                echo '<p>Please Enter An Address</p>
+                echo '<input type="checkbox" class="input-toggle" id="toggle"><label for="toggle">Please Enter An Address</label>
                       <form class="form-inline input-location" action="index.html">
                         <input type="text" name="street" placeholder="Street Address">
                         <input type="text" name="city" placeholder="City">
@@ -93,7 +93,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-      echo $lat.' <br />' .$lng;
+      // echo $lat.' <br />' .$lng;
     ?>
 
     <section class="main-container">
