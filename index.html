@@ -10,7 +10,7 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="<?php echo ( !isset($_GET["city"]) ? 'hide' : ''); ?>">
       <div class="container">
         <div class="row">
 
@@ -112,10 +112,24 @@
         $json_a = json_decode($json, true);
       ?>
 
+
+      <div class="landing-bg <?php echo ( isset($_GET["city"]) ? 'hide' : ''); ?>">
+        <img src="/images/oneRoofFull.svg">
+        <h1>FIND A PROVIDER<br />NEAR YOU</h1>
+        <form class="landing-form" action="index.html">
+          <input type="text" name="street" placeholder="Street Address">
+          <input type="text" name="city" placeholder="City">
+          <input type="text"  name="state" placeholder="State">
+          <button type="submit">SAVE</button>
+        </form>
+      </div>
+
+
+
       <!-- START FOR EACH -->
 
       <?php foreach ($json_a as $users => $user) { ?>
-          <div class="shelter-list-component">
+          <div class="shelter-list-component <?php echo ( !isset($_GET["city"]) ? 'hide' : ''); ?>">
             <div class="container">
 
             <div class="teaser row">
