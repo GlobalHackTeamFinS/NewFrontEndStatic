@@ -818,7 +818,7 @@ button.shelter-toggle {
               width: 50%; } }
 
 .your-location label {
-  color: #46bfff;
+  color: #fff;
   text-align: center;
   width: 100%;
   display: block; }
@@ -830,10 +830,10 @@ button.shelter-toggle {
     .your-location .change-toggle {
       text-align: right; } }
 .your-location .change-location {
-  top: 116px; }
+  top: 153px; }
   @media (min-width: 600px) {
     .your-location .change-location {
-      top: 73px; } }
+      top: 75px; } }
   @media (min-width: 768px) {
     .your-location .change-location {
       top: 76px; } }
@@ -855,18 +855,18 @@ button.shelter-toggle {
   position: absolute;
   background-color: #e2e2e2;
   padding: 15px;
-  top: 67px;
+  top: 107px;
   z-index: 1; }
   @media (min-width: 600px) {
     .input-location {
       width: 320px;
-      top: 38px;
+      top: 75px;
       z-index: 1;
       right: 10px; } }
   @media (min-width: 768px) {
     .input-location {
       width: 320px;
-      top: 49px;
+      top: 75px;
       z-index: 1;
       right: 10px; } }
   .input-location input {
