@@ -49,7 +49,7 @@
                         <input type="text" name="street" placeholder="Street Address">
                         <input type="text" name="city" placeholder="City">
                         <input type="text"  name="state" placeholder="State">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit">SAVE</button>
                       </form>';
               }
             ?>
@@ -120,7 +120,7 @@
         <div class="list-border">
           <div class="shelter-list-component">
             <div class="container">
-              <div class="row">
+              <div class="teaser row">
                 <h1 class="title"><?php echo $user['name'] ?></h1>
                 <section>
                   <div class="stats open-beds">
@@ -188,8 +188,10 @@
                     <button class="shelter-toggle">SHOW MORE</button>
                   </div>
                 </section>
+              </div>
                 <!-- MORE INFO SECTION -->
-                <section class="clearfix more-info">
+              <div class="full row more-info clearfix">
+                <section class="clearfix">
                   <address>
                     <p class="phone"><?php echo $user['phone'] ?></p>
                     <ul class="address">

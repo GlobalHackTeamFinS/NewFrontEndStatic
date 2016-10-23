@@ -588,8 +588,7 @@ p {
   margin: 0; }
 
 .phone {
-  color: #46bfff;
-  font-family: 'Lato', sans-serif;
+  color: #32d5f2;
   font-weight: 600; }
 
 .address {
@@ -597,7 +596,6 @@ p {
   padding: 0px;
   margin: 0px; }
   .address li {
-    font-family: 'Lato', sans-serif;
     font-weight: 300; }
 
 .shelter-description {
@@ -613,7 +611,7 @@ body {
 
 header {
   width: 100%;
-  background-color: #6C029F;
+  background-color: #32d5f2;
   padding: 15px 0; }
   @media (min-width: 600px) {
     header {
@@ -644,7 +642,7 @@ header {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #46bfff;
+    color: #fdc351;
     font-size: 12px; }
   header .your-location {
     margin-top: 10px; }
@@ -662,11 +660,11 @@ header {
           background-color: #fff;
           margin-top: 20px;
           text-align: right;
-          color: #6C029F;
+          color: #32d5f2;
           padding: 3px;
           text-decoration: none; }
         header .your-location a:hover {
-          background-color: #46bfff;
+          background-color: #fdc351;
           color: #fff; } }
 
 .container {
@@ -689,7 +687,7 @@ footer {
 button.shelter-toggle {
   background: none;
   text-align: center;
-  color: #46bfff;
+  color: #fdc351;
   font-size: 14px;
   margin: 0px auto;
   border: none; }
@@ -719,36 +717,37 @@ button.shelter-toggle {
       .shelter-list-component .title {
         margin: 30px auto;
         font-size: 32px; } }
-  .shelter-list-component section {
-    width: 100%;
-    display: table;
-    padding: 15px 15px 15px; }
-    @media (min-width: 600px) {
-      .shelter-list-component section {
-        width: 50%;
-        display: initial;
-        padding: 0px 0px 20px; } }
-    .shelter-list-component section .stats {
-      display: table-cell;
-      width: 33.3%;
-      text-align: center; }
+  .shelter-list-component .teaser {
+    max-width: 1200px;
+    margin: 0 auto; }
+    .shelter-list-component .teaser section {
+      width: 100%;
+      display: table; }
       @media (min-width: 600px) {
-        .shelter-list-component section .stats {
-          display: inline-block;
-          text-align: center;
-          margin-right: 9px;
-          width: auto; } }
-      @media (min-width: 768px) {
-        .shelter-list-component section .stats {
-          display: inline-block;
-          text-align: center;
-          margin-right: 35px;
-          width: auto; } }
-      .shelter-list-component section .stats p {
-        font-size: 24px; }
+        .shelter-list-component .teaser section {
+          width: 50%;
+          display: initial; } }
+      .shelter-list-component .teaser section .stats {
+        display: table-cell;
+        width: 33.3%;
+        text-align: center; }
+        @media (min-width: 600px) {
+          .shelter-list-component .teaser section .stats {
+            display: inline-block;
+            text-align: center;
+            margin-right: 9px;
+            width: auto; } }
         @media (min-width: 768px) {
-          .shelter-list-component section .stats p {
-            font-size: 32px; } }
+          .shelter-list-component .teaser section .stats {
+            display: inline-block;
+            text-align: center;
+            margin-right: 35px;
+            width: auto; } }
+        .shelter-list-component .teaser section .stats p {
+          font-size: 24px; }
+          @media (min-width: 768px) {
+            .shelter-list-component .teaser section .stats p {
+              font-size: 32px; } }
   .shelter-list-component .person-icon-container {
     display: table-cell;
     width: 60%; }
@@ -784,17 +783,21 @@ button.shelter-toggle {
     display: none;
     background-color: #ececec;
     color: #3b3b49;
-    margin-top: 0px;
+    padding-left: 15px;
+    margin: 0;
     clear: both;
     width: 100%; }
+    .shelter-list-component .more-info section {
+      max-width: 1200px;
+      margin: 0 auto; }
     .shelter-list-component .more-info address {
       margin: 0px auto; }
       .shelter-list-component .more-info address a {
-        color: #46bfff;
+        color: #fdc351;
         text-decoration: none; }
         @media (min-width: 600px) {
           .shelter-list-component .more-info address a {
-            padding: 15px 0px 15px;
+            padding: 15px 0 0;
             float: left; }
             .shelter-list-component .more-info address a address {
               float: right; }
@@ -815,14 +818,13 @@ button.shelter-toggle {
     border: none;
     padding: 5px;
     border-radius: 2px;
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700; }
+    font-size: 12px;
+    font-weight: 600; }
   .input-location button {
-    background-color: #46bfff;
+    background-color: #fdc351;
+    font-weight: 600;
     border: none;
     border-radius: 2px;
     color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    width: 100%; }
+    width: 100%;
+    letter-spacing: 1px; }
