@@ -603,27 +603,32 @@ p {
 .shelter-description {
   margin-top: 15px; }
 
+.hotline {
+  color: #46bfff;
+  font-weight: 700; }
+
 body {
   margin: 0px;
-  padding-bottom: 115px; }
+  padding-bottom: 80px; }
 
 header {
-  height: 120px;
   width: 100%;
-  background-color: #6C029F; }
+  background-color: #6C029F;
+  padding: 15px 0; }
+  @media (min-width: 600px) {
+    header {
+      float: left;
+      margin-bottom: 25px; } }
   header h1 {
     text-align: center;
     font-size: 24px;
     color: #fff;
-    letter-spacing: 2px;
-    padding-top: 10px; }
+    letter-spacing: 2px; }
     @media (min-width: 600px) {
       header h1 {
         text-align: left;
         float: left;
-        width: 50%;
-        padding-top: 30px;
-        padding-left: 30px; } }
+        width: 50%; } }
     @media (min-width: 768px) {
       header h1 {
         font-size: 32px; } }
@@ -641,23 +646,28 @@ header {
     text-decoration: none;
     color: #46bfff;
     font-size: 12px; }
-  @media (min-width: 600px) {
-    header .your-location {
-      float: right;
-      padding-top: 20px; }
-      header .your-location p.change {
-        margin-top: 12px;
-        font-weight: 600; }
-      header .your-location a {
-        background-color: #fff;
-        margin-top: 20px;
-        text-align: right;
-        color: #6C029F;
-        padding: 3px;
-        text-decoration: none; }
-      header .your-location a:hover {
-        background-color: #46bfff;
-        color: #fff; } }
+  header .your-location {
+    margin-top: 10px; }
+    @media (min-width: 600px) {
+      header .your-location {
+        margin-top: 0px; } }
+    @media (min-width: 768px) {
+      header .your-location {
+        float: right;
+        margin-top: 3px; }
+        header .your-location p.change {
+          margin-top: 12px;
+          font-weight: 600; }
+        header .your-location a {
+          background-color: #fff;
+          margin-top: 20px;
+          text-align: right;
+          color: #6C029F;
+          padding: 3px;
+          text-decoration: none; }
+        header .your-location a:hover {
+          background-color: #46bfff;
+          color: #fff; } }
 
 .container {
   position: relative;
