@@ -15,7 +15,7 @@
         <div class="row">
           <h1 class="title">Beds Nearby</h1>
           <div class="your-location">
-            <?php 
+            <?php
 
               function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
@@ -36,13 +36,13 @@
               }
 
 
-              if (isset($_GET["street"]) && isset($_GET["city"]) && isset($_GET["state"])){ 
+              if (isset($_GET["street"]) && isset($_GET["city"]) && isset($_GET["state"])){
                 $street = $_GET["street"];
                 $city = $_GET["city"];
                 $state = $_GET["state"];
                 echo '<p>'.$street.'</p>';
                 echo '<p>'.$city.', '.$state.'</p>';
-               } 
+               }
                else {
                 echo '<input type="checkbox" class="input-toggle" id="toggle"><label for="toggle">Please Enter An Address</label>
                       <form class="form-inline input-location" action="index.html">
@@ -224,8 +224,33 @@
     </section>
 
     <footer>
-      <p>If you need assistance please call</p>
-      <p class="hotline">1-800-555-5555</p>
+      <div class="hotline">
+        <h3>If you need assistance please call</h3>
+        <h2>1-800-555-5555</h2>
+      </div>
+      <div class="key">
+        <h3>Accepted Clients Key:</h3>
+        <div class="key-icon">
+          <img src="images/accessible.svg">
+          <p>Disabled Care</p>
+        </div>
+        <div class="key-icon">
+          <img src="images/family.svg">
+          <p>Families</p>
+        </div>
+        <div class="key-icon">
+          <img src="images/female_icon.svg">
+          <p>Women</p>
+        </div>
+        <div class="key-icon">
+          <img src="images/male_icon.svg">
+          <p>Men</p>
+        </div>
+        <div class="key-icon">
+          <img src="images/veterans.svg">
+          <p>Veterans</p>
+        </div>
+      </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
