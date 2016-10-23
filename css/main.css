@@ -798,22 +798,7 @@ button.shelter-toggle {
       .shelter-list-component .button-container {
         display: block; } }
   .shelter-list-component .more-info {
-<<<<<<< HEAD
     display: none;
-=======
-    display: none; }
-    @media (min-width: 600px) {
-      .shelter-list-component .more-info {
-        padding: 15px 0px 15px;
-        float: left; }
-        .shelter-list-component .more-info address {
-          float: right; }
-        .shelter-list-component .more-info .shelter-description {
-          margin-top: 0px;
-          width: 50%; } }
-  .shelter-list-component.open .more-info {
-    display: block;
->>>>>>> d8667d3b8f916443b32fe1c46dab3de6a5f875b6
     background-color: #ececec;
     color: #3b3b49;
     margin-top: 0px;
@@ -824,3 +809,12 @@ button.shelter-toggle {
       .shelter-list-component .more-info address a {
         color: #46bfff;
         text-decoration: none; }
+        @media (min-width: 600px) {
+          .shelter-list-component .more-info address a {
+            padding: 15px 0px 15px;
+            float: left; }
+            .shelter-list-component .more-info address a address {
+              float: right; }
+            .shelter-list-component .more-info address a .shelter-description {
+              margin-top: 0px;
+              width: 50%; } }

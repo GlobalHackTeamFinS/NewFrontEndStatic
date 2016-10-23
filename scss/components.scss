@@ -100,45 +100,29 @@
 	}
 	.more-info{
 		display: none;
-<<<<<<< HEAD
 		background-color: $neutral-2;
 		color: $neutral-1;
 		margin-top: 0px;
 		clear: both;
 		width: 100%;
+
 		address {
 			margin: 0px auto;
 			a {
 				color: $action-color;
 				text-decoration: none;
-=======
-		@media (min-width: 600px) {
-			padding: 15px 0px 15px;
-			float: left;
-			address {
-				float: right;
-			}
-			.shelter-description {
-				margin-top: 0px;
-				width: 50%;
-			}
-		}
-	}
-	&.open {
-		.more-info {
-			display: block;
-			background-color: $neutral-2;
-			color: $neutral-1;
-			margin-top: 0px;
-			clear: both;
-			width: 100%;
-			address {
-				margin: 0px auto;
-				a {
-					color: $action-color;
-					text-decoration: none;
+				@media (min-width: 600px) {
+					padding: 15px 0px 15px;
+					float: left;
+
+					address {
+						float: right;
+					}
+					.shelter-description {
+						margin-top: 0px;
+						width: 50%;
+					}
 				}
->>>>>>> d8667d3b8f916443b32fe1c46dab3de6a5f875b6
 			}
 		}
 	}
