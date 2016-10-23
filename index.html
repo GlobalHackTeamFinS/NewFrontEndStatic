@@ -87,11 +87,11 @@
                     </div>
                     <div class="stats miles-away">
                       <p>
-                        <?php 
+                        <?php
 
                         $shelterLng = $user['gpsLocation']['longitude'];
                         $shelterLat = $user['gpsLocation']['latitude'];
-                        
+
 
                         // Get cURL resource
                         $curl = curl_init();
@@ -108,7 +108,7 @@
 
                         $respDecoded = json_decode($resp, true);
                         $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
-                        
+
                         if ($miles != NULL) {
                           echo str_replace("mi","",$miles);
                         } else {
@@ -175,29 +175,9 @@
                     <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
                   </div>
                 </div>
-                <div class="button-container">
-                  <button class="shelter-toggle">SHOW MORE</button>
-                </div>
+            
                 </section>
-                <section class="more-info">
-                  <div class="container">
-                    <div class="row">
-                      <address>
-                      <a href="tel:<?php echo $user['phone'] ?>"><?php echo $user['phone'] ?></a>
-                      <ul class="address">
-                        <li><?php echo $user['address']['line1'] ?></li>
-                        <?php
-                          $line2 = $user['address']['line2'] ? '<li>' . $user['address']['line2'] . '</li>' : null;
-                          echo $line2;
-                        ?>
-                        <li><?php echo $user['address']['city'] . ', ' . $user['address']['state'] . ' ' .  $user['address']['zip'] ?></li>
-                      </ul>
-                      <a href="directions">Get Directions</a>
-                      <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
-                    </address>
-                    </div>
-                  </div>
-                </section>
+
               </div>
             </section>
           </div>

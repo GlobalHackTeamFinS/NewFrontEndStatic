@@ -739,12 +739,12 @@ button.shelter-toggle {
   .shelter-list-component section {
     width: 100%;
     display: table;
-    padding: 15px 15px 15px; }
+    padding: 0 15px 20px; }
     @media (min-width: 600px) {
       .shelter-list-component section {
         width: 50%;
         display: initial;
-        padding: 0px 0px 20px; } }
+        padding: 0 0px 20px; } }
     .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
@@ -799,15 +799,6 @@ button.shelter-toggle {
         display: block; } }
   .shelter-list-component .more-info {
     display: none; }
-    @media (min-width: 600px) {
-      .shelter-list-component .more-info {
-        padding: 15px 0px 15px;
-        float: left; }
-        .shelter-list-component .more-info address {
-          float: right; }
-        .shelter-list-component .more-info .shelter-description {
-          margin-top: 0px;
-          width: 50%; } }
   .shelter-list-component.open .more-info {
     display: block;
     background-color: #ececec;
@@ -818,10 +809,9 @@ button.shelter-toggle {
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s; }
     .shelter-list-component.open .more-info address {
-      margin: 10px auto 0px;
+      margin: 0px auto;
       font-style: normal;
-      font-family: "Lato", sans-serif;
-      padding-top: 10px; }
+      font-family: "Lato", sans-serif; }
       .shelter-list-component.open .more-info address a {
         color: #46bfff;
         text-decoration: none;
