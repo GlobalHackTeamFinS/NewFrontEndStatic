@@ -619,18 +619,18 @@ header {
     header {
       float: left;
       margin-bottom: 25px; } }
-  header h1 {
+  header h1, header h1 a {
     text-align: center;
     font-size: 24px;
     color: #fff;
     letter-spacing: 2px; }
     @media (min-width: 600px) {
-      header h1 {
+      header h1, header h1 a {
         text-align: left;
         float: left;
-        width: 50%; } }
+        width: 60%; } }
     @media (min-width: 768px) {
-      header h1 {
+      header h1, header h1 a {
         font-size: 32px; } }
   header p {
     text-align: center;
@@ -802,13 +802,42 @@ button.shelter-toggle {
               margin-top: 0px;
               width: 50%; } }
 
-.input-location {
+.your-location label {
+  color: #46bfff;
+  text-align: center;
   width: 100%;
-  padding: 0 15px;
-  max-width: 320px;
-  margin: 0 auto;
   display: block;
-  margin-top: 10px; }
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; }
+
+.input-toggle {
+  display: none; }
+
+.input-toggle:checked ~ .input-location {
+  display: block; }
+
+.input-location {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: absolute;
+  background-color: #e2e2e2;
+  padding: 15px;
+  top: 67px;
+  z-index: 1; }
+  @media (min-width: 600px) {
+    .input-location {
+      width: 320px;
+      top: 38px;
+      z-index: 1;
+      right: 10px; } }
+  @media (min-width: 768px) {
+    .input-location {
+      width: 320px;
+      top: 49px;
+      z-index: 1;
+      right: 10px; } }
   .input-location input {
     width: 100%;
     margin-bottom: 5px;

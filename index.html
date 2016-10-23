@@ -15,8 +15,44 @@
         <div class="row">
           <h1 class="title">Beds Nearby</h1>
           <div class="your-location">
-            <p>20 West Pine Street</p>
-            <p>Springfield, IL 90292</p>
+            <?php 
+
+              function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+
+                $theta = $lon1 - $lon2;
+                $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                $dist = acos($dist);
+                $dist = rad2deg($dist);
+                $miles = $dist * 60 * 1.1515;
+                $unit = strtoupper($unit);
+
+                if ($unit == "K") {
+                  return ($miles * 1.609344);
+                } else if ($unit == "N") {
+                    return ($miles * 0.8684);
+                  } else {
+                      return $miles;
+                    }
+              }
+
+
+              if (isset($_GET["street"]) && isset($_GET["city"]) && isset($_GET["state"])){ 
+                $street = $_GET["street"];
+                $city = $_GET["city"];
+                $state = $_GET["state"];
+                echo '<p>'.$street.'</p>';
+                echo '<p>'.$city.', '.$state.'</p>';
+               } 
+               else {
+                echo '<input type="checkbox" class="input-toggle" id="toggle"><label for="toggle">Please Enter An Address</label>
+                      <form class="form-inline input-location" action="index.html">
+                        <input type="text" name="street" placeholder="Street Address">
+                        <input type="text" name="city" placeholder="City">
+                        <input type="text"  name="state" placeholder="State">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </form>';
+              }
+            ?>
             <!-- <a class="change" href="#">CHANGE</a> -->
           </div>
         </div>
@@ -42,7 +78,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-
+      // echo $lat.' <br />' .$lng;
     ?>
 
     <section class="main-container">
