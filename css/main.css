@@ -820,3 +820,11 @@ button.shelter-toggle {
       .shelter-list-component.open .more-info address a {
         color: #46bfff;
         text-decoration: none; }
+
+.input-location {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 320px; }
+  .input-location input {
+    width: 100%;
+    margin-bottom: 5px; }

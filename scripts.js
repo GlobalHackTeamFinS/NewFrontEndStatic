@@ -10,3 +10,19 @@ $(document).ready(function () {
   	}
   });
 });
+
+console.log($(window).scrollTop());
+
+// if (1 === 1) {
+
+
+//   function toTop(callback) {
+//     $("html, body").animate({ scrollTop: $(document).height() }, 10000);
+//     toTop(function (){
+//       if (scrollTop === $(document).height()) {
+//         $("html, body").animate({ scrollTop: 0 }, 10000);
+//       };
+//     });
+//   }
+  
+// }
