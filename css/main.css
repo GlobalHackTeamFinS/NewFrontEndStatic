@@ -621,9 +621,12 @@ body {
 header {
   width: 100%;
   background-color: #32d5f2;
-  padding: 15px 0; }
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden; }
   header .container {
-    max-width: 1200px; }
+    max-width: 1200px;
+    z-index: 1; }
   @media (min-width: 600px) {
     header {
       float: left;
@@ -655,7 +658,7 @@ header {
     text-decoration: none;
     color: #fdc351;
     font-size: 12px; }
-  header .title {
+  header .title a {
     width: 200px;
     height: 70px;
     color: transparent;
@@ -687,6 +690,22 @@ header {
         header .your-location a:hover {
           background-color: #fdc351;
           color: #fff; } }
+  @media (min-width: 600px) {
+    header:after {
+      content: '';
+      display: block;
+      background-color: #fdc351;
+      height: 2000px;
+      width: 2000px;
+      top: -75%;
+      position: absolute;
+      transform: rotate(35deg); } }
+  @media (min-width: 600px) and (min-width: 900px) {
+    header:after {
+      left: 10%; } }
+  @media (min-width: 600px) and (min-width: 1100px) {
+    header:after {
+      left: 15%; } }
 
 .container {
   position: relative;
@@ -706,7 +725,8 @@ footer {
   width: 100%;
   background-color: #ececec;
   text-align: center;
-  border-top: 3px solid #fff; }
+  border-top: 3px solid #fff;
+  display: table; }
   @media (min-width: 600px) {
     footer {
       height: 120px; } }
@@ -914,37 +934,26 @@ button.shelter-toggle {
   color: #32d5f2; }
 @media (min-width: 600px) {
   .hotline {
-    font-weight: 700;
-    float: left;
-    width: 50%;
+    display: table-cell;
+    font-weight: 600;
+    width: 50vw;
     border-right: 2px solid #e1e1e1;
     padding-bottom: 30px; } }
 
 .key {
-  margin: 10px 10px; }
-  .key h3 {
+  display: table-cell;
+  width: 50vw; }
+  .key > * {
     text-align: center; }
-  .key p {
-    font-size: 12px; }
-  @media (min-width: 853px) {
-    .key {
-      margin: 0px 10px; }
-      .key p {
-        font-size: 14px; } }
+
+.key-container {
+  display: table-row; }
 
 .key-icon {
-  margin: 10px;
-  margin-top: 10px;
-  display: inline;
-  float: right; }
+  display: table-cell;
+  width: 20%; }
   .key-icon img {
     height: 20px; }
-  @media (min-width: 853px) {
-    .key-icon {
-      margin-left: 20px;
-      margin-top: 20px; }
-      .key-icon img {
-        height: 30px; } }
 
 .landing-bg {
   background-color: #000;
