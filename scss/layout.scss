@@ -49,7 +49,14 @@ header {
 		color: $action-color;
 		font-size: $small-bold;
 	}
-
+	.title {
+		width: 200px;
+		color: transparent;
+		text-indent: 100%;
+		background-image: url("../images/oneRoofFull.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
 	.your-location {
 		margin-top: 10px;
 		@media (min-width: 600px) {

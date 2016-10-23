@@ -646,6 +646,13 @@ header {
     text-decoration: none;
     color: #fdc351;
     font-size: 12px; }
+  header .title {
+    width: 200px;
+    color: transparent;
+    text-indent: 100%;
+    background-image: url("../images/oneRoofFull.svg");
+    background-size: contain;
+    background-repeat: no-repeat; }
   header .your-location {
     margin-top: 10px; }
     @media (min-width: 600px) {
@@ -812,9 +819,7 @@ button.shelter-toggle {
   color: #46bfff;
   text-align: center;
   width: 100%;
-  display: block;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300; }
+  display: block; }
 
 .input-toggle {
   display: none; }
