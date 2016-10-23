@@ -822,7 +822,24 @@ button.shelter-toggle {
 .input-location {
   width: 100%;
   padding: 0 15px;
-  max-width: 320px; }
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px; }
   .input-location input {
     width: 100%;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; }
+  .input-location button {
+    background-color: #46bfff;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    width: 100%; }

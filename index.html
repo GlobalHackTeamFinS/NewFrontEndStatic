@@ -16,6 +16,26 @@
           <h1 class="title">Beds Nearby</h1>
           <div class="your-location">
             <?php 
+
+              function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+
+                $theta = $lon1 - $lon2;
+                $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                $dist = acos($dist);
+                $dist = rad2deg($dist);
+                $miles = $dist * 60 * 1.1515;
+                $unit = strtoupper($unit);
+
+                if ($unit == "K") {
+                  return ($miles * 1.609344);
+                } else if ($unit == "N") {
+                    return ($miles * 0.8684);
+                  } else {
+                      return $miles;
+                    }
+              }
+
+
               if (isset($_GET["street"]) && isset($_GET["city"]) && isset($_GET["state"])){ 
                 $street = $_GET["street"];
                 $city = $_GET["city"];
@@ -62,7 +82,7 @@
       // Set some options - we are passing in a useragent too here
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,
-          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address='.$street.',+'.$city.',+'.$state.'&key=AIzaSyCF25VMhNe1GmYHpgzxiOFou8DLtMcsxPk',
+          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address='.$street.',+'.$city.',+'.$state.'&key=AIzaSyCadUl2N3NYMz7d87qEKk_6SxV3a-Cdxl4',
           CURLOPT_USERAGENT => 'Codular Sample cURL Request'
       ));
       // Send the request & save response to $resp
@@ -73,7 +93,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-
+      echo $lat.' <br />' .$lng;
     ?>
 
     <section class="main-container">
@@ -81,17 +101,17 @@
       <?php
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
-        // usort(
-        //   $json_a,
-        //   function($a, $b) {
-        //     if ($a['milesAway'] == $b['milesAway']) {
-        //       return 0;
-        //     }
-        //     return ($a['milesAway'] < $b['milesAway']) ? -1 : 1;
-        // });
-        // $json = json_encode($json_arr);
+        usort(
+          $json_a,
+          function($a, $b) {
+            if ($a['milesAway'] == $b['milesAway']) {
+              return 0;
+            }
+            return ($a['milesAway'] < $b['milesAway']) ? -1 : 1;
+        });
+        $json = json_encode($json_a);
 
-        // $json_a = json_decode($json, true);
+        $json_a = json_decode($json, true);
       ?>
 
       <!-- START FOR EACH -->
@@ -121,30 +141,14 @@
                     <p>
                       <?php 
 
-                      $shelterLng = $user['gpsLocation']['longitude'];
                       $shelterLat = $user['gpsLocation']['latitude'];
-                      // Get cURL resource
-                      $curl = curl_init();
-                      // Set some options - we are passing in a useragent too here
-                      curl_setopt_array($curl, array(
-                          CURLOPT_RETURNTRANSFER => 1,
-                          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLng.'%'.$shelterLat.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
-                          CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-                      ));
-                      // Send the request & save response to $resp
-                      $resp = curl_exec($curl);
-                      // Close request to clear up some resources
-                      curl_close($curl);
-
-
-
-                      $respDecoded = json_decode($resp, true);
-                      $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
+                      $shelterLng = '-'.$user['gpsLocation']['longitude'];
+                      $milesInt = distance($lat, $lng, $shelterLat, $shelterLng, "M");
                       
-                      if ($miles != NULL) {
-                        echo str_replace("mi","",$miles);
+                      if ($milesInt < 50) {
+                        echo number_format((float)$milesInt, 2, '.', '');
                       } else {
-                        echo "N/A";
+                        echo "";
                       }
 
                       ?>
