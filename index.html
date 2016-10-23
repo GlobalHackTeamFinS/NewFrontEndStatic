@@ -72,12 +72,15 @@
     <!-- GET LONG AND LAT OF ACURRENT ADDRESS -->
 
     <?php
+      $street = str_replace(" ","+",$street);
+      $city = str_replace(" ","+",$city);
+
       // Get cURL resource
       $curl = curl_init();
       // Set some options - we are passing in a useragent too here
       curl_setopt_array($curl, array(
           CURLOPT_RETURNTRANSFER => 1,
-          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address=20+West+Pine+Street,+Springfield,+IL&key=AIzaSyCF25VMhNe1GmYHpgzxiOFou8DLtMcsxPk',
+          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/geocode/json?address='.$street.',+'.$city.',+'.$state.'&key=AIzaSyCadUl2N3NYMz7d87qEKk_6SxV3a-Cdxl4',
           CURLOPT_USERAGENT => 'Codular Sample cURL Request'
       ));
       // Send the request & save response to $resp
@@ -88,7 +91,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-      // echo $lat.' <br />' .$lng;
+      //echo $lat.' <br />' .$lng;
     ?>
 
     <section class="main-container">
@@ -96,17 +99,17 @@
       <?php
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
-        // usort(
-        //   $json_a,
-        //   function($a, $b) {
-        //     if ($a['milesAway'] == $b['milesAway']) {
-        //       return 0;
-        //     }
-        //     return ($a['milesAway'] < $b['milesAway']) ? -1 : 1;
-        // });
-        // $json = json_encode($json_arr);
+        usort(
+          $json_a,
+          function($a, $b) {
+            if ($a['milesAway'] == $b['milesAway']) {
+              return 0;
+            }
+            return ($a['milesAway'] < $b['milesAway']) ? -1 : 1;
+        });
+        $json = json_encode($json_a);
 
-        // $json_a = json_decode($json, true);
+        $json_a = json_decode($json, true);
       ?>
 
       <!-- START FOR EACH -->
@@ -117,34 +120,37 @@
             <div class="container">
               <div class="teaser row">
                 <h1 class="title"><?php echo $user['name'] ?></h1>
-                  <section>
-                    <div class="stats open-beds">
-                      <p><?php echo $user['totalBeds'] - $user['occupiedBeds']?></p>
-                      <h3>Beds Open</h3>
-                    </div>
-                    <div class="stats doors-close">
-                      <p>
-                        <?php
-                          $to_time = strtotime("2008-12-13 10:42:00");
-                          $from_time = strtotime("2008-12-13 10:21:00");
-                          echo round(abs($to_time - $from_time) / 60,2). " min";
-                        ?>
-                      </p>
-                      <h3>Doors Close</h3>
-                    </div>
-                    <div class="stats miles-away">
-                      <p>
-                        <?php
+                <section>
+                  <div class="stats open-beds">
+                    <p><?php echo $user['totalBeds'] - $user['occupiedBeds']?></p>
+                    <h3>Beds Open</h3>
+                  </div>
+                  <div class="stats doors-close">
+                    <p>
+                      <?php
+                        $to_time = strtotime("2008-12-13 10:42:00");
+                        $from_time = strtotime("2008-12-13 10:21:00");
+                        echo round(abs($to_time - $from_time) / 60,2). " min";
+                      ?>
+                    </p>
+                    <h3>Doors Close</h3>
+                  </div>
+                  <div class="stats miles-away">
+                    <p>
+                      <?php
 
-                      $shelterLat = $user['gpsLocation']['latitude'];
-                      $shelterLng = '-'.$user['gpsLocation']['longitude'];
-                      $milesInt = distance($lat, $lng, $shelterLat, $shelterLng, "M");
-                      
-                      if ($milesInt < 50) {
-                        echo number_format((float)$milesInt, 2, '.', '');
-                      } else {
-                        echo "n/a";
-                      }
+                        $shelterLat = $user['gpsLocation']['latitude'];
+                        $shelterLng = '-'.$user['gpsLocation']['longitude'];
+                        //echo $shelterLat .'<br />'.$shelterLng;
+                        $milesInt = distance($lat, $lng, $shelterLat, $shelterLng, "M");
+                        //echo $milesInt;
+                        if ($milesInt < 50) {
+                          echo number_format((float)$milesInt, 2, '.', '');
+                        } elseif ($milesInt > 50 && isset($_GET["street"])) {
+                          echo "> 50";
+                        } else {
+                          echo "n/a";
+                        }
 
                       ?>
                     </p>
