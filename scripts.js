@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $(".shelter-toggle" ).click(function() {
   	var parentComponent = $(this).parents('.shelter-list-component');
   	if ($(this).text() === 'SHOW LESS'){
@@ -9,9 +10,11 @@ $(document).ready(function () {
   		$(this).text('SHOW LESS');
   	}
   });
+
+  $(document('.minutes')
 });
 
-console.log($(window).scrollTop());
+//console.log($(window).scrollTop());
 
 // if (1 === 1) {
 

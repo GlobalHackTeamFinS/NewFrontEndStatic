@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Beds Near</title>
+    <title>ONE ROOF</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <header>
+    <header class="<?php echo ( !isset($_GET["city"]) ? 'hide' : ''); ?>">
       <div class="container">
         <div class="row">
 
@@ -129,10 +129,24 @@
         $json_a = json_decode($json, true);
       ?>
 
+
+      <div class="landing-bg <?php echo ( isset($_GET["city"]) ? 'hide' : ''); ?>">
+        <img src="/images/oneRoofFull.svg">
+        <h1>FIND A PROVIDER<br />NEAR YOU</h1>
+        <form class="landing-form" action="index.html">
+          <input type="text" name="street" placeholder="Street Address">
+          <input type="text" name="city" placeholder="City">
+          <input type="text"  name="state" placeholder="State">
+          <button type="submit">SAVE</button>
+        </form>
+      </div>
+
+
+
       <!-- START FOR EACH -->
 
       <?php foreach ($json_a as $users => $user) { ?>
-          <div class="shelter-list-component">
+          <div class="shelter-list-component <?php echo ( !isset($_GET["city"]) ? 'hide' : ''); ?>">
             <div class="container">
 
             <div class="teaser row">
@@ -144,11 +158,13 @@
                 </div>
                 <div class="stats doors-close">
                   <p>
+                    <span class="minutes">
                     <?php
                       $to_time = strtotime("2008-12-13 10:42:00");
                       $from_time = strtotime("2008-12-13 10:21:00");
-                      echo round(abs($to_time - $from_time) / 60,2). " min";
+                      echo round(abs($to_time - $from_time) / 60,2);
                     ?>
+                    </span> min
                   </p>
                   <h3>Doors Close</h3>
                 </div>
