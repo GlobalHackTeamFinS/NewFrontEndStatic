@@ -587,6 +587,22 @@ p {
   font-weight: 300;
   margin: 0; }
 
+.phone {
+  color: #46bfff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600; }
+
+.address {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px; }
+  .address li {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; }
+
+.shelter-description {
+  margin-top: 15px; }
+
 body {
   margin: 0px;
   padding-bottom: 115px; }
@@ -712,12 +728,12 @@ button.shelter-toggle {
   .shelter-list-component section {
     width: 100%;
     display: table;
-    padding: 0 15px 20px; }
+    padding: 15px 15px 15px; }
     @media (min-width: 600px) {
       .shelter-list-component section {
         width: 50%;
         display: initial;
-        padding: 0 0px 20px; } }
+        padding: 0px 0px 20px; } }
     .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
@@ -772,6 +788,15 @@ button.shelter-toggle {
         display: block; } }
   .shelter-list-component .more-info {
     display: none; }
+    @media (min-width: 600px) {
+      .shelter-list-component .more-info {
+        padding: 15px 0px 15px;
+        float: left; }
+        .shelter-list-component .more-info address {
+          float: right; }
+        .shelter-list-component .more-info .shelter-description {
+          margin-top: 0px;
+          width: 50%; } }
   .shelter-list-component.open .more-info {
     display: block;
     background-color: #ececec;

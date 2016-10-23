@@ -25,13 +25,13 @@
 	section {
 		width: 100%;
 		display: table;
-		padding: 0 15px 20px;
+		padding: 15px 15px 15px;
 
 		@media (min-width: 600px){
 			width: 50%;
     		//float: left;
     		display: initial;
-    		padding: 0 0px 20px;
+    		padding: 0px 0px 20px;
 		}
 		.stats {
 			display: table-cell;
@@ -100,6 +100,17 @@
 	}
 	.more-info{
 		display: none;
+		@media (min-width: 600px) {
+			padding: 15px 0px 15px;
+			float: left;
+			address {
+				float: right;
+			}
+			.shelter-description {
+				margin-top: 0px;
+				width: 50%;
+			}
+		}
 	}
 	&.open {
 		.more-info {
