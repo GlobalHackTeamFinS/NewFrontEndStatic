@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(".shelter-toggle" ).click(function() {
   	var parentComponent = $(this).parents('.shelter-list-component');
-  	if (parentComponent.hasClass('open')){
+  	if ($(this).text() === 'SHOW LESS'){
   		parentComponent.find('.more-info').slideToggle('fast');
   		$(this).text('SHOW MORE');
   	} else {
