@@ -1,11 +1,14 @@
 .landing-bg {
-	//background-image: url("/images/oneRoofFull.svg");
+	background-image: url("/images/St_Louis_night_expblend.jpg");
     background-color: #000;
     height: 100vh;
     width: 100vw;
     position: absolute;
     top: 0;
     z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     img {
     	width: 80%;
