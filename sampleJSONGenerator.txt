@@ -14,8 +14,8 @@
     },
     registered: '{{date(new Date(2014, 0, 1), new Date(), "YYYY-MM-ddThh:mm:ss Z")}}',
     gpsLocation: {
-     latitude: '{{floating(40, 50)}}',
-     longitude: '{{floating(80, 100)}}'
+     latitude: '{{floating(38, 39)}}',
+     longitude: '{{floating(90, 91)}}'
     },
     milesAway: '{{floating(0, 10)}}',
     acceptedClients: {

@@ -102,95 +102,90 @@
             <div class="container">
               <div class="row">
                 <h1 class="title"><?php echo $user['name'] ?></h1>
-                  <section>
-                    <div class="stats open-beds">
-                      <p><?php echo $user['totalBeds'] - $user['occupiedBeds']?></p>
-                      <h3>Beds Open</h3>
-                    </div>
-                    <div class="stats doors-close">
-                      <p>
-                        <?php
-                          $to_time = strtotime("2008-12-13 10:42:00");
-                          $from_time = strtotime("2008-12-13 10:21:00");
-                          echo round(abs($to_time - $from_time) / 60,2). " min";
-                        ?>
-                      </p>
-                      <h3>Doors Close</h3>
-                    </div>
-                    <div class="stats miles-away">
-                      <p>
-                        <?php
+                <section>
+                  <div class="stats open-beds">
+                    <p><?php echo $user['totalBeds'] - $user['occupiedBeds']?></p>
+                    <h3>Beds Open</h3>
+                  </div>
+                  <div class="stats doors-close">
+                    <p>
+                      <?php
+                        $to_time = strtotime("2008-12-13 10:42:00");
+                        $from_time = strtotime("2008-12-13 10:21:00");
+                        echo round(abs($to_time - $from_time) / 60,2). " min";
+                      ?>
+                    </p>
+                    <h3>Doors Close</h3>
+                  </div>
+                  <div class="stats miles-away">
+                    <p>
+                      <?php 
 
-                        $shelterLng = $user['gpsLocation']['longitude'];
-                        $shelterLat = $user['gpsLocation']['latitude'];
+                      $shelterLng = $user['gpsLocation']['longitude'];
+                      $shelterLat = $user['gpsLocation']['latitude'];
+                      // Get cURL resource
+                      $curl = curl_init();
+                      // Set some options - we are passing in a useragent too here
+                      curl_setopt_array($curl, array(
+                          CURLOPT_RETURNTRANSFER => 1,
+                          CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLng.'%'.$shelterLat.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
+                          CURLOPT_USERAGENT => 'Codular Sample cURL Request'
+                      ));
+                      // Send the request & save response to $resp
+                      $resp = curl_exec($curl);
+                      // Close request to clear up some resources
+                      curl_close($curl);
 
 
-                        // Get cURL resource
-                        $curl = curl_init();
-                        // Set some options - we are passing in a useragent too here
-                        curl_setopt_array($curl, array(
-                            CURLOPT_RETURNTRANSFER => 1,
-                            CURLOPT_URL => 'https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins='.$lat.','.$lng.'&destinations='.$shelterLng.'%'.$shelterLat.'&key=AIzaSyBa0bYfjOKYOeiK2qnj96bV0_qr1g2uFos',
-                            CURLOPT_USERAGENT => 'Codular Sample cURL Request'
-                        ));
-                        // Send the request & save response to $resp
-                        $resp = curl_exec($curl);
-                        // Close request to clear up some resources
-                        curl_close($curl);
 
-                        $respDecoded = json_decode($resp, true);
-                        $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
+                      $respDecoded = json_decode($resp, true);
+                      $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
+                      
+                      if ($miles != NULL) {
+                        echo str_replace("mi","",$miles);
+                      } else {
+                        echo "N/A";
+                      }
 
-                        if ($miles != NULL) {
-                          echo str_replace("mi","",$miles);
-                        } else {
-                          echo "N/A";
-                        }
-
-                        ?>
-                      </p>
-                      <h3>Miles Away</h3>
-                    </div>
-                  </section>
-                  <section>
-                    <div class="person-icon-container">
-                      <?php if ($user['acceptedClients']['men'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/male_icon.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['women'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/female_icon.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['children'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/family.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['veteran'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/veterans.svg">
-                        </div>
-                      <?php } ?>
-                      <?php if ($user['acceptedClients']['handicap'] === true) { ?>
-                        <div class="icon">
-                          <img src="/images/accessible.svg">
-                        </div>
-                      <?php } ?>
-                    </div>
-                    <div class="button-container">
-                      <button class="shelter-toggle">SHOW MORE</button>
-                    </div>
-                    </section>
-              </div>
-            </div>
-
-            <!-- MORE INFO SECTION -->
-            <section class="more-info">
-              <div class="container">
-                <div class="row">
+                      ?>
+                    </p>
+                    <h3>Miles Away</h3>
+                  </div>
+                </section>
+                <section>
+                  <div class="person-icon-container">
+                    <?php if ($user['acceptedClients']['men'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/male_icon.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['women'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/female_icon.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['children'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/family.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['veteran'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/veterans.svg">
+                      </div>
+                    <?php } ?>
+                    <?php if ($user['acceptedClients']['handicap'] === true) { ?>
+                      <div class="icon">
+                        <img src="/images/accessible.svg">
+                      </div>
+                    <?php } ?>
+                  </div>
+                  <div class="button-container">
+                    <button class="shelter-toggle">SHOW MORE</button>
+                  </div>
+                </section>
+                <!-- MORE INFO SECTION -->
+                <section class="clearfix more-info">
                   <address>
                     <p class="phone"><?php echo $user['phone'] ?></p>
                     <ul class="address">
@@ -203,15 +198,9 @@
                     </ul>
                     <a href="directions">Get Directions</a>
                   </address>
-                  <div class="shelter-description">
-                    <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
-                  </div>
-                </div>
-            
                 </section>
-
               </div>
-            </section>
+            </div>
           </div>
         </div>
       <?php } ?>

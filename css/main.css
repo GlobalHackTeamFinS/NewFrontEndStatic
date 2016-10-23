@@ -776,7 +776,7 @@ button.shelter-toggle {
         text-align: center;
         float: right; } }
     .shelter-list-component .person-icon-container .icon {
-      width: 25%;
+      width: 20%;
       display: inline-block;
       float: left; }
       @media (min-width: 600px) {
@@ -798,28 +798,18 @@ button.shelter-toggle {
       .shelter-list-component .button-container {
         display: block; } }
   .shelter-list-component .more-info {
-    display: none; }
-    @media (min-width: 600px) {
-      .shelter-list-component .more-info {
-        padding: 15px 0px 15px;
-        float: left; }
-        .shelter-list-component .more-info address {
-          float: right; }
-        .shelter-list-component .more-info .shelter-description {
-          margin-top: 0px;
-          width: 50%; } }
-  .shelter-list-component.open .more-info {
-    display: block;
+    display: none;
     background-color: #ececec;
     color: #3b3b49;
     margin-top: 0px;
     clear: both;
     width: 100%; }
-    .shelter-list-component.open .more-info address {
+    .shelter-list-component .more-info address {
       margin: 0px auto; }
-      .shelter-list-component.open .more-info address a {
+      .shelter-list-component .more-info address a {
         color: #46bfff;
         text-decoration: none; }
+<<<<<<< HEAD
 
 .input-location {
   width: 100%;
@@ -828,3 +818,14 @@ button.shelter-toggle {
   .input-location input {
     width: 100%;
     margin-bottom: 5px; }
+=======
+        @media (min-width: 600px) {
+          .shelter-list-component .more-info address a {
+            padding: 15px 0px 15px;
+            float: left; }
+            .shelter-list-component .more-info address a address {
+              float: right; }
+            .shelter-list-component .more-info address a .shelter-description {
+              margin-top: 0px;
+              width: 50%; } }
+>>>>>>> 459fbd0d634c3b7b7ca02a7044b52e932ecefaec
