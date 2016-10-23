@@ -229,39 +229,55 @@
 }
 
 .hotline {
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid #e1e1e1;
+	margin-bottom: 10px;
 
 	h3 {
 		color: $neutral-1;
 	}
 	h2{
-		margin-top: 10px;
 		color: $base-color;
+		padding-bottom: 10px;
 	}
-	@media (min-width: 600px) {
+	@media (min-width: 768px) {
+		margin-bottom: 0;
 		display: table-cell;
 		font-weight: $bold;
-		//float: left;
 		width: 50vw;
+		border: none;
 		border-right: 2px solid #e1e1e1;
-		padding-bottom: 30px;
 	}
 }
 
 .key {
-	display: table-cell;
-	width: 50vw;
-	& > * {
-		text-align: center;
+	display: block;
+	width: 100%;
+
+	@media (min-width: 768px){
+		padding-left: 15px;
+		display: table-cell;
+		width: 50vw;
+		padding-left: 5px;
 	}
 }
 .key-container {
-	display: table-row;
+	display: inline-block;
+	width: 100%;
+	max-width: 600px;
+	p {
+		font-size: $small-normal;
+	}
 }
 .key-icon {
-	display: table-cell;
-	width: 20%;
+	display: inline-block;
+	width: 18%;
 	img {
 		height: 20px;
+	}
+	@media (min-width: 768px){
+		width: 19%;
 	}
 }
 
