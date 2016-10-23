@@ -587,27 +587,48 @@ p {
   font-weight: 300;
   margin: 0; }
 
+.phone {
+  color: #46bfff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600; }
+
+.address {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px; }
+  .address li {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; }
+
+.shelter-description {
+  margin-top: 15px; }
+
+.hotline {
+  color: #46bfff;
+  font-weight: 700; }
+
 body {
   margin: 0px;
-  padding-bottom: 115px; }
+  padding-bottom: 80px; }
 
 header {
-  height: 120px;
   width: 100%;
-  background-color: #6C029F; }
+  background-color: #6C029F;
+  padding: 15px 0; }
+  @media (min-width: 600px) {
+    header {
+      float: left;
+      margin-bottom: 25px; } }
   header h1 {
     text-align: center;
     font-size: 24px;
     color: #fff;
-    letter-spacing: 2px;
-    padding-top: 10px; }
+    letter-spacing: 2px; }
     @media (min-width: 600px) {
       header h1 {
         text-align: left;
         float: left;
-        width: 50%;
-        padding-top: 30px;
-        padding-left: 30px; } }
+        width: 50%; } }
     @media (min-width: 768px) {
       header h1 {
         font-size: 32px; } }
@@ -625,23 +646,28 @@ header {
     text-decoration: none;
     color: #46bfff;
     font-size: 12px; }
-  @media (min-width: 600px) {
-    header .your-location {
-      float: right;
-      padding-top: 20px; }
-      header .your-location p.change {
-        margin-top: 12px;
-        font-weight: 600; }
-      header .your-location a {
-        background-color: #fff;
-        margin-top: 20px;
-        text-align: right;
-        color: #6C029F;
-        padding: 3px;
-        text-decoration: none; }
-      header .your-location a:hover {
-        background-color: #46bfff;
-        color: #fff; } }
+  header .your-location {
+    margin-top: 10px; }
+    @media (min-width: 600px) {
+      header .your-location {
+        margin-top: 0px; } }
+    @media (min-width: 768px) {
+      header .your-location {
+        float: right;
+        margin-top: 3px; }
+        header .your-location p.change {
+          margin-top: 12px;
+          font-weight: 600; }
+        header .your-location a {
+          background-color: #fff;
+          margin-top: 20px;
+          text-align: right;
+          color: #6C029F;
+          padding: 3px;
+          text-decoration: none; }
+        header .your-location a:hover {
+          background-color: #46bfff;
+          color: #fff; } }
 
 .container {
   position: relative;
@@ -673,7 +699,8 @@ footer {
   width: 100%;
   height: 80px;
   background-color: #ececec;
-  text-align: center; }
+  text-align: center;
+  border-top: 3px solid #fff; }
 
 button.shelter-toggle {
   background: none;
@@ -712,12 +739,12 @@ button.shelter-toggle {
   .shelter-list-component section {
     width: 100%;
     display: table;
-    padding: 0 15px 20px; }
+    padding: 15px 15px 15px; }
     @media (min-width: 600px) {
       .shelter-list-component section {
         width: 50%;
         display: initial;
-        padding: 0 0px 20px; } }
+        padding: 0px 0px 20px; } }
     .shelter-list-component section .stats {
       display: table-cell;
       width: 33.3%;
@@ -771,7 +798,22 @@ button.shelter-toggle {
       .shelter-list-component .button-container {
         display: block; } }
   .shelter-list-component .more-info {
+<<<<<<< HEAD
     display: none;
+=======
+    display: none; }
+    @media (min-width: 600px) {
+      .shelter-list-component .more-info {
+        padding: 15px 0px 15px;
+        float: left; }
+        .shelter-list-component .more-info address {
+          float: right; }
+        .shelter-list-component .more-info .shelter-description {
+          margin-top: 0px;
+          width: 50%; } }
+  .shelter-list-component.open .more-info {
+    display: block;
+>>>>>>> d8667d3b8f916443b32fe1c46dab3de6a5f875b6
     background-color: #ececec;
     color: #3b3b49;
     margin-top: 0px;

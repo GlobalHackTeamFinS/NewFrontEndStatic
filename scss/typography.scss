@@ -13,3 +13,24 @@ p {
 	font-weight: $normal;
 	margin: 0;
 }
+.phone {
+	color: #46bfff;
+	font-family: 'Lato', sans-serif;
+	font-weight: $bold;
+}
+.address {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	li {
+		font-family: 'Lato', sans-serif;
+		font-weight: $normal;
+	}
+}
+.shelter-description {
+   margin-top: 15px;
+}
+.hotline {
+	color: #46bfff;
+	font-weight: 700;
+}

@@ -17,7 +17,7 @@
           <div class="your-location">
             <p>20 West Pine Street</p>
             <p>Springfield, IL 90292</p>
-            <a class="change" href="#">CHANGE</a>
+            <!-- <a class="change" href="#">CHANGE</a> -->
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
       $respDecoded = json_decode($resp, true);
       $lat = $respDecoded["results"][0]["geometry"]["location"]["lat"];
       $lng = $respDecoded["results"][0]["geometry"]["location"]["lng"];
-      
+
     ?>
 
     <section class="main-container">
@@ -50,8 +50,8 @@
         $string = file_get_contents("sampleProviders.json");
         $json_a = json_decode($string, true);
         // usort(
-        //   $json_a, 
-        //   function($a, $b) { 
+        //   $json_a,
+        //   function($a, $b) {
         //     if ($a['milesAway'] == $b['milesAway']) {
         //       return 0;
         //     }
@@ -63,7 +63,7 @@
       ?>
 
       <!-- START FOR EACH -->
-      
+
       <?php foreach ($json_a as $users => $user) { ?>
         <div class="list-border">
           <div class="shelter-list-component">
@@ -91,8 +91,6 @@
 
                       $shelterLng = $user['gpsLocation']['longitude'];
                       $shelterLat = $user['gpsLocation']['latitude'];
-                      
-
                       // Get cURL resource
                       $curl = curl_init();
                       // Set some options - we are passing in a useragent too here
@@ -105,6 +103,8 @@
                       $resp = curl_exec($curl);
                       // Close request to clear up some resources
                       curl_close($curl);
+
+
 
                       $respDecoded = json_decode($resp, true);
                       $miles = $respDecoded['rows'][0]['elements'][0]['distance']['text'];
@@ -165,7 +165,6 @@
                       <li><?php echo $user['address']['city'] . ', ' . $user['address']['state'] . ' ' .  $user['address']['zip'] ?></li>
                     </ul>
                     <a href="directions">Get Directions</a>
-                    <p>This shelter provides hot showers and breakfast in the morning. Leave time is 6:00 am. Any belongings left in the shelter will be held for one day.</p>
                   </address>
                 </section>
               </div>
@@ -174,12 +173,12 @@
         </div>
       <?php } ?>
       <!-- END FOR EACH -->
-        
+
     </section>
 
     <footer>
       <p>If you need assistance please call</p>
-      <p>1-800-555-5555</p>
+      <p class="hotline">1-800-555-5555</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
